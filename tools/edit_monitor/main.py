@@ -104,6 +104,7 @@ def main(argv: list[str]):
 
   if args.force_cleanup:
     dm.cleanup()
+    return
 
   try:
     dm.start()
