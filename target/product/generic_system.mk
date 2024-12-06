@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     avbctl \
     bootctl \
+	dtcompare \
     tinycap \
     tinyhostless \
     tinymix \
