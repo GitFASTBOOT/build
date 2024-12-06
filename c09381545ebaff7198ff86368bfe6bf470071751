@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4a9d41c_02db71ba",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2024-12-06T21:17:53Z",
+      "side": 1,
+      "message": "Could we change make to always emit true/false? Or is empty string meaningful?",
+      "revId": "c09381545ebaff7198ff86368bfe6bf470071751",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
