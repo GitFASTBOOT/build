@@ -19,6 +19,8 @@ package android.aconfig.storage;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class PackageTable {
@@ -58,6 +60,22 @@ public class PackageTable {
         }
 
         return null;
+    }
+
+    public List<String> getPackageList() {
+        List<String> list = new ArrayList<>(mHeader.mNumPackages);
+        mReader.position(mHeader.mNodeOffset);
+        int fingerprintBytes = mHeader.mVersion == 1 ? 0 : 8;
+        int skipBytes =
+                fingerprintBytes
+                        + 4 // int: mPackageId
+                        + 4 // int: mBooleanStartIndex
+                        + 4; // int: mNextOffset
+        for (int i = 0; i < mHeader.mNumPackages; i++) {
+            list.add(mReader.readString());
+            mReader.position(mReader.position() + skipBytes);
+        }
+        return list;
     }
 
     public Header getHeader() {
