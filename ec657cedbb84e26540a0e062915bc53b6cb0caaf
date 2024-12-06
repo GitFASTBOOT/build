@@ -22,6 +22,30 @@
       },
       "revId": "ec657cedbb84e26540a0e062915bc53b6cb0caaf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "439bb729_56a0955a",
+        "filename": "tools/edit_monitor/daemon_manager.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1114063
+      },
+      "writtenOn": "2024-12-06T23:19:58Z",
+      "side": 1,
+      "message": "I cant think any error case here, but theoretically it could fail (OS error), in that case, the main function should catch the exception and terminate the process.",
+      "parentUuid": "131d2c8d_387d64ef",
+      "range": {
+        "startLine": 130,
+        "startChar": 7,
+        "endLine": 130,
+        "endChar": 37
+      },
+      "revId": "ec657cedbb84e26540a0e062915bc53b6cb0caaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
