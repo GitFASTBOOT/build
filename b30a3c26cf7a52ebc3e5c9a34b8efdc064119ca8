@@ -42,6 +42,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "46d6e5be_0edc37b2",
+        "filename": "tools/edit_monitor/daemon_manager.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 422,
+      "author": {
+        "id": 1114063
+      },
+      "writtenOn": "2024-12-06T17:51:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb3067e5_dffea230",
+      "range": {
+        "startLine": 422,
+        "startChar": 26,
+        "endLine": 422,
+        "endChar": 34
+      },
+      "revId": "b30a3c26cf7a52ebc3e5c9a34b8efdc064119ca8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9a43aa04_11f9527e",
@@ -89,6 +113,30 @@
           ]
         }
       ],
+      "revId": "b30a3c26cf7a52ebc3e5c9a34b8efdc064119ca8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f23b3c26_ac84e301",
+        "filename": "tools/edit_monitor/daemon_manager.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 1114063
+      },
+      "writtenOn": "2024-12-06T17:51:42Z",
+      "side": 1,
+      "message": "logging.exception will add the trace stack automatically",
+      "parentUuid": "9a43aa04_11f9527e",
+      "range": {
+        "startLine": 426,
+        "startChar": 11,
+        "endLine": 426,
+        "endChar": 20
+      },
       "revId": "b30a3c26cf7a52ebc3e5c9a34b8efdc064119ca8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
