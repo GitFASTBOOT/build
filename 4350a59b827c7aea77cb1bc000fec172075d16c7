@@ -22,6 +22,30 @@
       },
       "revId": "4350a59b827c7aea77cb1bc000fec172075d16c7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8dfad2a2_a033f58f",
+        "filename": "tools/edit_monitor/daemon_manager.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1114063
+      },
+      "writtenOn": "2024-12-06T22:55:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "37a4981d_59f35bcc",
+      "range": {
+        "startLine": 119,
+        "startChar": 8,
+        "endLine": 119,
+        "endChar": 37
+      },
+      "revId": "4350a59b827c7aea77cb1bc000fec172075d16c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
