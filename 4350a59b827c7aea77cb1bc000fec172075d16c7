@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37a4981d_59f35bcc",
+        "filename": "tools/edit_monitor/daemon_manager.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1132849
+      },
+      "writtenOn": "2024-12-06T19:29:37Z",
+      "side": 1,
+      "message": "put this in a finally block",
+      "range": {
+        "startLine": 119,
+        "startChar": 8,
+        "endLine": 119,
+        "endChar": 37
+      },
+      "revId": "4350a59b827c7aea77cb1bc000fec172075d16c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
