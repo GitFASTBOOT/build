@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a643c2a5_286cb088",
+        "filename": "tools/aconfig/aconfig_storage_file/srcs/android/aconfig/storage/PackageTable.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1064003
+      },
+      "writtenOn": "2024-12-06T18:30:48Z",
+      "side": 1,
+      "message": "Probably best to use named constants for the magic values of `8` and `12` used here?",
+      "range": {
+        "startLine": 71,
+        "startChar": 50,
+        "endLine": 71,
+        "endChar": 52
+      },
+      "revId": "399b4afd936fa8378483ba01d1a3f58af996a54a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
