@@ -16,6 +16,24 @@
       "message": "Could we change make to always emit true/false? Or is empty string meaningful?",
       "revId": "c09381545ebaff7198ff86368bfe6bf470071751",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7288ffa_926a9603",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1878380
+      },
+      "writtenOn": "2024-12-06T21:32:35Z",
+      "side": 1,
+      "message": "It is unclear to me if empty string is meaningful. [Codesearch](https://source.corp.google.com/search?q\u003dhwui%5C.use_vulkan%20case:yes\u0026ct\u003dos\u0026sq\u003drepo:googleplex-android%2Fplatform%2Fsuperproject%2Fmain%20b:main\u0026start\u003d1) returns a bunch of hits, but I am unsure if this distinction is necessary.\n\nI switched the soong build.prop to empty string because this is the tested and verified behavior. Would you recommend that we convert the make built `ro.hwui.use_vulkan` to an actual boolean?",
+      "parentUuid": "e4a9d41c_02db71ba",
+      "revId": "c09381545ebaff7198ff86368bfe6bf470071751",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
