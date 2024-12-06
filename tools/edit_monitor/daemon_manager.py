@@ -13,6 +13,7 @@
 # limitations under the License.
 
 
+import fcntl
 import getpass
 import hashlib
 import logging
@@ -101,9 +102,21 @@ class DaemonManager:
       return
 
     try:
-      self._stop_any_existing_instance()
-      self._write_pid_to_pidfile()
-      self._start_daemon_process()
+      setup_lock_file = self.pid_file_path.parent.joinpath(
+          self.pid_file_path.name + '.setup')
+      logging.info("setup lock file: %s", setup_lock_file)
+      with open(setup_lock_file, "w") as f:
+        try:
+          # Acquire an exclusive lock
+          fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except IOError:
+          logging.warning("Another edit monitor is starting, exitinng...")
+          return
+        self._stop_any_existing_instance()
+        self._write_pid_to_pidfile()
+        self._start_daemon_process()
+        # Release the lock
+        fcntl.flock(f, fcntl.LOCK_UN)
     except Exception as e:
       logging.exception("Failed to start daemon manager with error %s", e)
       self._send_error_event_to_clearcut(
