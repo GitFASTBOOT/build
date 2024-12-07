@@ -92,6 +92,30 @@
       },
       "revId": "2cc26925320f8a24b255954ddd1533f9d349ecd8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b93c547_f3b4dfaf",
+        "filename": "tools/edit_monitor/main.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1132849
+      },
+      "writtenOn": "2024-12-07T16:22:42Z",
+      "side": 1,
+      "message": "oh do you mean the sys.exit(0) triggers another call of finally blocks?",
+      "parentUuid": "b4d88cc0_187448b6",
+      "range": {
+        "startLine": 97,
+        "startChar": 2,
+        "endLine": 97,
+        "endChar": 14
+      },
+      "revId": "2cc26925320f8a24b255954ddd1533f9d349ecd8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
