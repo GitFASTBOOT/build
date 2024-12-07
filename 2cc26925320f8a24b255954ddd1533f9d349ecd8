@@ -68,6 +68,30 @@
       },
       "revId": "2cc26925320f8a24b255954ddd1533f9d349ecd8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4d88cc0_187448b6",
+        "filename": "tools/edit_monitor/main.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1114063
+      },
+      "writtenOn": "2024-12-07T06:49:39Z",
+      "side": 1,
+      "message": "The first time the process received the sigterm signal, it will perform the code in the finally block (the stop process). However, if it received another sigterm signal during the stopping, the process will just terminate directly, leaving the stop process unfinished.",
+      "parentUuid": "6882c859_0454a95d",
+      "range": {
+        "startLine": 97,
+        "startChar": 2,
+        "endLine": 97,
+        "endChar": 14
+      },
+      "revId": "2cc26925320f8a24b255954ddd1533f9d349ecd8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
