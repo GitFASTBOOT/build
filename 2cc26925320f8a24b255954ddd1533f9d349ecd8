@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fd8f90dd_71dc5e12",
+        "filename": "tools/edit_monitor/main.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1132849
+      },
+      "writtenOn": "2024-12-07T16:28:40Z",
+      "side": 1,
+      "message": "just a suggestion here. global \u0027sigterm_received\u0027 is also ok. your call",
+      "parentUuid": "e218f012_9a2fe49c",
+      "range": {
+        "startLine": 90,
+        "startChar": 9,
+        "endLine": 90,
+        "endChar": 25
+      },
+      "revId": "2cc26925320f8a24b255954ddd1533f9d349ecd8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b5acbc09_675a69e6",
         "filename": "tools/edit_monitor/main.py",
         "patchSetId": 8
