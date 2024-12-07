@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bcf3b6a8_b248227c",
+        "filename": "tools/edit_monitor/main.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1132849
+      },
+      "writtenOn": "2024-12-07T16:24:13Z",
+      "side": 1,
+      "message": "use a module(global) lock to check and set sigterm_received",
+      "parentUuid": "663c7a35_c798f54e",
+      "range": {
+        "startLine": 90,
+        "startChar": 9,
+        "endLine": 90,
+        "endChar": 25
+      },
+      "revId": "2cc26925320f8a24b255954ddd1533f9d349ecd8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b5acbc09_675a69e6",
         "filename": "tools/edit_monitor/main.py",
         "patchSetId": 8
@@ -37,6 +61,30 @@
       "writtenOn": "2024-12-07T03:19:58Z",
       "side": 1,
       "message": "not solving the problem as it\u0027s not thread safe",
+      "range": {
+        "startLine": 92,
+        "startChar": 2,
+        "endLine": 92,
+        "endChar": 21
+      },
+      "revId": "2cc26925320f8a24b255954ddd1533f9d349ecd8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b3c27ee_a8039ff9",
+        "filename": "tools/edit_monitor/main.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1132849
+      },
+      "writtenOn": "2024-12-07T16:24:13Z",
+      "side": 1,
+      "message": "use a lock to check and set sigterm_received",
+      "parentUuid": "b5acbc09_675a69e6",
       "range": {
         "startLine": 92,
         "startChar": 2,
