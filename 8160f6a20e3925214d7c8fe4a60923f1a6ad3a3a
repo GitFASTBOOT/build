@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dc8af82_310cd968",
+        "filename": "ci/build_test_suites.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1900272
+      },
+      "writtenOn": "2024-12-07T01:40:33Z",
+      "side": 1,
+      "message": "if any error happens we need to build the target that errored out just in case, add `build_targets.add(target)`. and maybe it can also be reported with `get_metrics_agent().report_unoptimized_build_target(target, f\u0027Error in parsing test discovery output for {target}: {repr(e)}`",
+      "revId": "8160f6a20e3925214d7c8fe4a60923f1a6ad3a3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
