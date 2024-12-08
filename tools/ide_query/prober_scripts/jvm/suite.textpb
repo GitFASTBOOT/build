@@ -1,4 +1,5 @@
 tests: {
   name: "general"
   scripts: "build/make/tools/ide_query/prober_scripts/jvm/Foo.java"
+  scripts: "build/make/tools/ide_query/prober_scripts/jvm/Bar.java"
 }
