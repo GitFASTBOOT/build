@@ -374,6 +374,23 @@
       "message": "Bom dia! Será que seria possível fazer um upgrade do sistema do Android de 2, 3, 4G Para passar a funcionar 2, 3, 4, 5G?",
       "revId": "256b14b2f868223e9adcdd355acffb950b230fb1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4f4d42d_966b28a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3775369
+      },
+      "writtenOn": "2024-12-08T23:23:30Z",
+      "side": 1,
+      "message": "١٢",
+      "revId": "256b14b2f868223e9adcdd355acffb950b230fb1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
