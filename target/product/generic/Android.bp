@@ -736,7 +736,6 @@ android_filesystem_defaults {
                 "PrintRecommendationService", // handheld_system
                 "PrintSpooler", // handheld_system
                 "ProxyHandler", // handheld_system
-                "SecureElement", // handheld_system
                 "SettingsProvider", // base_system
                 "SharedStorageBackup", // handheld_system
                 "Shell", // base_system
@@ -794,7 +793,12 @@ android_filesystem_defaults {
                 "system_compatibility_matrix.xml", //base_system
                 "telephony-common", // libs from TeleService
                 "voip-common", // base_system
-            ] + select(soong_config_variable("ANDROID", "release_crashrecovery_module"), {
+            ] + select(release_flag("RELEASE_NATIVE_OMAPI"), {
+                true: [],
+                default: [
+                    "SecureElement", // handheld_system
+                ],
+            }) + select(soong_config_variable("ANDROID", "release_crashrecovery_module"), {
                 "true": [
                     "com.android.crashrecovery", // base_system (RELEASE_CRASHRECOVERY_MODULE)
                 ],
