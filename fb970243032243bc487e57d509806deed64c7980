@@ -112,6 +112,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8487ada_18c060f7",
+        "filename": "tools/ide_query/prober_scripts/jvm/Foo.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2066167
+      },
+      "writtenOn": "2024-12-09T10:11:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "226d2f6a_ffcce3e9",
+      "range": {
+        "startLine": 35,
+        "startChar": 7,
+        "endLine": 35,
+        "endChar": 9
+      },
+      "revId": "fb970243032243bc487e57d509806deed64c7980",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "314d7608_4ea07fe7",
@@ -125,6 +149,24 @@
       "writtenOn": "2024-12-09T07:46:08Z",
       "side": 1,
       "message": "Wouldn\u0027t that type `other..` ?",
+      "revId": "fb970243032243bc487e57d509806deed64c7980",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2ae6d0f_e55bb55b",
+        "filename": "tools/ide_query/prober_scripts/jvm/Foo.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2066167
+      },
+      "writtenOn": "2024-12-09T10:11:36Z",
+      "side": 1,
+      "message": "Other has a method other() that returns Other. So the result is \"other.other().other()\".",
+      "parentUuid": "314d7608_4ea07fe7",
       "revId": "fb970243032243bc487e57d509806deed64c7980",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
