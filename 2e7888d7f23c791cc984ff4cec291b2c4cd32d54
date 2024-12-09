@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbe631e6_5ded180a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1042638
+      },
+      "writtenOn": "2024-12-09T17:33:38Z",
+      "side": 1,
+      "message": "Thank you for clarifying, Juyong! In that case, we don\u0027t need this CL, I will abandon it.",
+      "revId": "2e7888d7f23c791cc984ff4cec291b2c4cd32d54",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7236d583_66c48c3b",
