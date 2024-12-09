@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "dde09c92_06c5543b",
+        "filename": "target/product/base_system_ext.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3447051
+      },
+      "writtenOn": "2024-12-09T05:01:26Z",
+      "side": 1,
+      "message": "Hi Jiyong, we got a review commnet on https://android-review.googlesource.com/c/platform/system/sepolicy/+/3350769 to update it to default value as ro. properties can be set dynamically, at runtime, but only once. So if we don\u0027t set its value at build time, someone can set its value at runtime. In order to set the value at build time, we need to use PRODUCT_SYSTEM_EXT_PROPERTIES (SYSTEM_EXT because it\u0027s used by the code from the system_ext partition).\n\nThis will ensure that it\u0027s set to an empty string if the vendor did not define their own value.",
+      "parentUuid": "7236d583_66c48c3b",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 69
+      },
+      "revId": "2e7888d7f23c791cc984ff4cec291b2c4cd32d54",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e433955c_c619758e",
