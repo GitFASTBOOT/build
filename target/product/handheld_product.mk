@@ -33,7 +33,8 @@ PRODUCT_PACKAGES += \
     preinstalled-packages-platform-handheld-product.xml \
     QuickSearchBox \
     SettingsIntelligence \
-    frameworks-base-overlays
+    frameworks-base-overlays \
+    AvatarPicker
 
 PRODUCT_PACKAGES_DEBUG += \
     frameworks-base-overlays-debug
