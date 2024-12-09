@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "546c7d84_0730e99d",
+        "filename": "target/product/base_system_ext.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2024-12-09T09:40:43Z",
+      "side": 1,
+      "message": "\u003e someone can set its value at runtime\n\nNo. It is prevented by sepolicy. I will commend on the other CL.",
+      "parentUuid": "dde09c92_06c5543b",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 69
+      },
+      "revId": "2e7888d7f23c791cc984ff4cec291b2c4cd32d54",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e433955c_c619758e",
