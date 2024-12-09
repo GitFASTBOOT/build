@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "240e15fe_2a020761",
+        "filename": "tools/aconfig/aconfig/templates/FeatureFlagsImpl.java.template",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 3599662
+      },
+      "writtenOn": "2024-12-09T22:53:11Z",
+      "side": 1,
+      "message": "maybe it\u0027s just me, but i find these files a little hard to follow... when does it make sense to split up these templates? (ie have FeatureFlagsImpl.java.template and FeatureFlagsImplExported.java.template and decide which to use in java.rs rather than passing through the bool)\n\nfeel free to ack this and we can do it later, i\u0027m more wondering if there\u0027s something preventing us from doing this",
+      "range": {
+        "startLine": 68,
+        "startChar": 7,
+        "endLine": 68,
+        "endChar": 19
+      },
+      "revId": "9156374dcf81ef1eb043e70d5fc73a9126705951",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
