@@ -16,6 +16,24 @@
       "message": "I see you checking returns in lines 37 and 43, could we add the `set -e` back in at this point, or are there still places that unexpectedly exit?",
       "revId": "960fe522561fbf2863a02d094ca518eb9ae9a4b4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40e0b23c_67d03b91",
+        "filename": "ci/build_metadata",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000701
+      },
+      "writtenOn": "2024-12-09T19:08:48Z",
+      "side": 1,
+      "message": "I didn\u0027t actually try it this time, but some of the shell_utils.sh functions do have test commands that evaluate to false, which triggers `set -e`, so I just took it out, rather than waiting for the bug to pop up.",
+      "parentUuid": "c0428b28_c30b58df",
+      "revId": "960fe522561fbf2863a02d094ca518eb9ae9a4b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
