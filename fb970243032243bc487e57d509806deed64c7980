@@ -1,0 +1,132 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "226d2f6a_ffcce3e9",
+        "filename": "tools/ide_query/prober_scripts/jvm/Foo.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3288188
+      },
+      "writtenOn": "2024-12-09T07:46:08Z",
+      "side": 1,
+      "message": "Let\u0027s use `workspace.` in GoB repositories.",
+      "range": {
+        "startLine": 35,
+        "startChar": 7,
+        "endLine": 35,
+        "endChar": 9
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "f0e4fc7f_f241040f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "tools/ide_query/prober_scripts/jvm/Foo.java",
+              "range": {
+                "startLine": 35,
+                "startChar": 0,
+                "endLine": 36,
+                "endChar": 0
+              },
+              "replacement": "    // workspace.waitForReady()\n"
+            },
+            {
+              "path": "tools/ide_query/prober_scripts/jvm/Foo.java",
+              "range": {
+                "startLine": 43,
+                "startChar": 0,
+                "endLine": 44,
+                "endChar": 0
+              },
+              "replacement": "    // workspace.waitForReady()\n"
+            },
+            {
+              "path": "tools/ide_query/prober_scripts/jvm/Foo.java",
+              "range": {
+                "startLine": 51,
+                "startChar": 0,
+                "endLine": 52,
+                "endChar": 0
+              },
+              "replacement": "    // workspace.waitForReady()\n"
+            },
+            {
+              "path": "tools/ide_query/prober_scripts/jvm/Foo.java",
+              "range": {
+                "startLine": 66,
+                "startChar": 0,
+                "endLine": 67,
+                "endChar": 0
+              },
+              "replacement": "    // workspace.waitForReady()\n"
+            },
+            {
+              "path": "tools/ide_query/prober_scripts/jvm/Foo.java",
+              "range": {
+                "startLine": 74,
+                "startChar": 0,
+                "endLine": 75,
+                "endChar": 0
+              },
+              "replacement": "    // workspace.waitForReady()\n"
+            },
+            {
+              "path": "tools/ide_query/prober_scripts/jvm/Foo.java",
+              "range": {
+                "startLine": 87,
+                "startChar": 0,
+                "endLine": 88,
+                "endChar": 0
+              },
+              "replacement": "    // workspace.waitForReady()\n"
+            },
+            {
+              "path": "tools/ide_query/prober_scripts/jvm/Foo.java",
+              "range": {
+                "startLine": 100,
+                "startChar": 0,
+                "endLine": 101,
+                "endChar": 0
+              },
+              "replacement": "    // workspace.waitForReady()\n"
+            },
+            {
+              "path": "tools/ide_query/prober_scripts/jvm/Foo.java",
+              "range": {
+                "startLine": 116,
+                "startChar": 0,
+                "endLine": 117,
+                "endChar": 0
+              },
+              "replacement": "    // workspace.waitForReady()\n"
+            }
+          ]
+        }
+      ],
+      "revId": "fb970243032243bc487e57d509806deed64c7980",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "314d7608_4ea07fe7",
+        "filename": "tools/ide_query/prober_scripts/jvm/Foo.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 3288188
+      },
+      "writtenOn": "2024-12-09T07:46:08Z",
+      "side": 1,
+      "message": "Wouldn\u0027t that type `other..` ?",
+      "revId": "fb970243032243bc487e57d509806deed64c7980",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
