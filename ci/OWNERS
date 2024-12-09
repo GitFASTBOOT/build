@@ -1,0 +1,4 @@
+# Localized ownership for faster actions during rollout
+# This isn't meant for owner reviews of the newer developments
+per-file build_test_suites.py,test_discovery_agent.py,optimized_targets.py = jdesprez@google.com, yangmingjun@google.com
+
