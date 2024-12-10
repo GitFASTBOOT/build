@@ -22,7 +22,6 @@ and fails if they do.
 
 from io import StringIO
 import argparse
-import hashlib
 import struct
 import sys
 
@@ -74,7 +73,7 @@ for fn in args.files:
             linenum=t.linenum)
       continue
 
-    if t.tagnum is not None and t.tagnum in by_tagnum:
+    if t.tagnum in by_tagnum:
       orig = by_tagnum[t.tagnum]
 
       if t.tagname != orig.tagname:
@@ -85,8 +84,7 @@ for fn in args.files:
         continue
 
     by_tagname[t.tagname] = t
-    if t.tagnum is not None:
-      by_tagnum[t.tagnum] = t
+    by_tagnum[t.tagnum] = t
 
   errors.extend(tagfile.errors)
   warnings.extend(tagfile.warnings)
