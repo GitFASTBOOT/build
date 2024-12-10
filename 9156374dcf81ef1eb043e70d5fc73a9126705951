@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "470895f9_7eecaacf",
+        "filename": "tools/aconfig/aconfig/templates/FeatureFlagsImpl.java.template",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1944425
+      },
+      "writtenOn": "2024-12-10T14:32:11Z",
+      "side": 1,
+      "message": "ah yes. there is nothing preventing us from doing that. It was like this originally because before there were not many if/else branches in the templated, most of the code are the same. but now since there are more and more branches, it makes sense to split them",
+      "parentUuid": "240e15fe_2a020761",
+      "range": {
+        "startLine": 68,
+        "startChar": 7,
+        "endLine": 68,
+        "endChar": 19
+      },
+      "revId": "9156374dcf81ef1eb043e70d5fc73a9126705951",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "214b97c0_a503d339",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-12-10T10:49:54Z",
       "side": 1,
       "message": "In exported mode, does the flag\u0027s permission\u0027s matter?",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 40
+      },
+      "revId": "9156374dcf81ef1eb043e70d5fc73a9126705951",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73af21d7_c8d84f82",
+        "filename": "tools/aconfig/aconfig/templates/FeatureFlagsImpl.java.template",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1944425
+      },
+      "writtenOn": "2024-12-10T14:32:11Z",
+      "side": 1,
+      "message": "yes it doesn\u0027t matter. removed",
+      "parentUuid": "214b97c0_a503d339",
       "range": {
         "startLine": 85,
         "startChar": 0,
