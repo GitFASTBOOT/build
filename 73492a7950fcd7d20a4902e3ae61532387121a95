@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f3a8194_f2a98602",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000701
+      },
+      "writtenOn": "2024-12-10T19:30:01Z",
+      "side": 1,
+      "message": "I\u0027d rather not do this. I\u0027m trying to keep a handle on all of these peripheral scripts.  They have a tend to get out of hand.  If I\u0027m not reviewing something fast enough, ping me.",
+      "revId": "73492a7950fcd7d20a4902e3ae61532387121a95",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
