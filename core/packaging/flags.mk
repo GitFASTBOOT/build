@@ -109,10 +109,16 @@ $(eval $(call generate-global-aconfig-flag-file, \
 define generate-partition-aconfig-storage-file
 $(eval $(strip $(1)): PRIVATE_OUT := $(strip $(1)))
 $(eval $(strip $(1)): PRIVATE_IN := $(strip $(9)))
+
+STORAGE_FILE_VERSION := 2
+# ifeq ($(RELEASE_FINGERPRINT_ACONFIG_PACKAGES),true)
+# STORAGE_FILE_VERSION := 2
+# endif
+
 $(strip $(1)): $(ACONFIG) $(strip $(9))
 	mkdir -p $$(dir $$(PRIVATE_OUT))
 	$$(if $$(PRIVATE_IN), \
-		$$(ACONFIG) create-storage --container $(10) --file package_map --out $$(PRIVATE_OUT) \
+		$$(ACONFIG) create-storage --container $(10) --file package_map --out $$(PRIVATE_OUT) --version $$(STORAGE_FILE_VERSION) \
 			$$(addprefix --cache ,$$(PRIVATE_IN)), \
 	)
 	touch $$(PRIVATE_OUT)
@@ -121,7 +127,7 @@ $(eval $(strip $(2)): PRIVATE_IN := $(strip $(9)))
 $(strip $(2)): $(ACONFIG) $(strip $(9))
 	mkdir -p $$(dir $$(PRIVATE_OUT))
 	$$(if $$(PRIVATE_IN), \
-		$$(ACONFIG) create-storage --container $(10) --file flag_map --out $$(PRIVATE_OUT) \
+		$$(ACONFIG) create-storage --container $(10) --file flag_map --out $$(PRIVATE_OUT) --version $$(STORAGE_FILE_VERSION) \
 			$$(addprefix --cache ,$$(PRIVATE_IN)), \
 	)
 	touch $$(PRIVATE_OUT)
@@ -130,7 +136,7 @@ $(eval $(strip $(3)): PRIVATE_IN := $(strip $(9)))
 $(strip $(3)): $(ACONFIG) $(strip $(9))
 	mkdir -p $$(dir $$(PRIVATE_OUT))
 	$$(if $$(PRIVATE_IN), \
-		$$(ACONFIG) create-storage --container $(10) --file flag_val --out $$(PRIVATE_OUT) \
+		$$(ACONFIG) create-storage --container $(10) --file flag_val --out $$(PRIVATE_OUT) --version $$(STORAGE_FILE_VERSION) \
 		$$(addprefix --cache ,$$(PRIVATE_IN)), \
 	)
 	touch $$(PRIVATE_OUT)
@@ -139,7 +145,7 @@ $(eval $(strip $(4)): PRIVATE_IN := $(strip $(9)))
 $(strip $(4)): $(ACONFIG) $(strip $(9))
 	mkdir -p $$(dir $$(PRIVATE_OUT))
 	$$(if $$(PRIVATE_IN), \
-		$$(ACONFIG) create-storage --container $(10) --file flag_info --out $$(PRIVATE_OUT) \
+		$$(ACONFIG) create-storage --container $(10) --file flag_info --out $$(PRIVATE_OUT) --version $$(STORAGE_FILE_VERSION) \
 		$$(addprefix --cache ,$$(PRIVATE_IN)), \
 	)
 	touch $$(PRIVATE_OUT)
