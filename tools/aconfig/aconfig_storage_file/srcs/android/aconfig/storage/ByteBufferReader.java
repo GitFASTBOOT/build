@@ -63,8 +63,4 @@ public class ByteBufferReader {
     public void position(int newPosition) {
         mByteBuffer.position(newPosition);
     }
-
-    public int position() {
-        return mByteBuffer.position();
-    }
 }
