@@ -22,6 +22,29 @@
       },
       "revId": "9156374dcf81ef1eb043e70d5fc73a9126705951",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "214b97c0_a503d339",
+        "filename": "tools/aconfig/aconfig/templates/FeatureFlagsImpl.java.template",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1890055
+      },
+      "writtenOn": "2024-12-10T10:49:54Z",
+      "side": 1,
+      "message": "In exported mode, does the flag\u0027s permission\u0027s matter?",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 40
+      },
+      "revId": "9156374dcf81ef1eb043e70d5fc73a9126705951",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
