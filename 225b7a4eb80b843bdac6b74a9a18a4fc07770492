@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7072d572_76dcc65d",
+        "filename": "target/product/generic/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1878380
+      },
+      "writtenOn": "2024-12-10T04:18:53Z",
+      "side": 1,
+      "message": "`com.android.compos` is [system_ext_specific](https://source.corp.google.com/h/googleplex-android/platform/packages/modules/Virtualization/+/1b4f36666c4b2a6204844f298748381438777eff:build/compos/Android.bp;l\u003d41;drc\u003d2528487c1d3007c65b631cb998d408e04d10cac1;bpv\u003d1;bpt\u003d0). IIUC, this CL will install compos in the `system` partition for targets that use the soong generic system image ([Cuttlefish currently](https://source.corp.google.com/search?q\u003dUSE_SOONG_DEFINED_SYSTEM_IMAGE\u0026sq\u003drepo:googleplex-android%2Fplatform%2Fsuperproject%2Fmain%20b:main)).\n\nIs installing compos in `system` intentional? If so, can we remove `system_ext_specific` from its Android.bp?",
+      "range": {
+        "startLine": 410,
+        "startChar": 9,
+        "endLine": 410,
+        "endChar": 29
+      },
+      "revId": "225b7a4eb80b843bdac6b74a9a18a4fc07770492",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
