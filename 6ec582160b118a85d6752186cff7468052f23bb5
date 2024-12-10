@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "922e7fb6_1efe7e70",
+        "filename": "tools/merge-event-log-tags.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1878380
+      },
+      "writtenOn": "2024-12-10T04:05:44Z",
+      "side": 1,
+      "message": "nit: unused import after this refactor.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 14
+      },
+      "revId": "6ec582160b118a85d6752186cff7468052f23bb5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
