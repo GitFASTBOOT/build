@@ -46,6 +46,30 @@
       },
       "revId": "225b7a4eb80b843bdac6b74a9a18a4fc07770492",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4aef5b1e_027d611a",
+        "filename": "target/product/generic/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1878380
+      },
+      "writtenOn": "2024-12-10T04:31:45Z",
+      "side": 1,
+      "message": "I think this is WAI. I recently moved the odex files of compos out of [system--\u003esystem_ext](https://android-review.git.corp.google.com/q/topic:%22mv_systemext_sscp_dexpreopt%22) and also removed the odex files from the allowlist in `tools/filelistdiff/allowlist` (the allowlist used in trunk_staging).\n\nHowever, I had to flag guard it due to the fact that the accompanying change in art/ is not available in next (next uses ART prebuilts). Once a new set of ART prebuilts is created containg https://android-review.git.corp.google.com/c/platform/art/+/3287191, ART will be able to locate these odex files in system_ext, and it will be safe to install these files in system_ext for `next`\n\n`RELEASE_INSTALL_APEX_SYSTEMSERVER_DEXPREOPT_SAME_PARTITION` is the build flag and b/379743613 is the tracking bug to promote this flag.",
+      "parentUuid": "9ef920db_3cb32db0",
+      "range": {
+        "startLine": 410,
+        "startChar": 9,
+        "endLine": 410,
+        "endChar": 29
+      },
+      "revId": "225b7a4eb80b843bdac6b74a9a18a4fc07770492",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
