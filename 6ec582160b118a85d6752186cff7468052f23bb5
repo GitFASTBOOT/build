@@ -22,6 +22,30 @@
       },
       "revId": "6ec582160b118a85d6752186cff7468052f23bb5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "564daedb_4ce520a0",
+        "filename": "tools/merge-event-log-tags.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2024-12-10T19:27:48Z",
+      "side": 1,
+      "message": "Will fix in a followup.",
+      "parentUuid": "922e7fb6_1efe7e70",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 14
+      },
+      "revId": "6ec582160b118a85d6752186cff7468052f23bb5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
