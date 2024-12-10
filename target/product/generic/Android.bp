@@ -407,6 +407,7 @@ android_filesystem_defaults {
         "cameraserver",
         "cgroups.json",
         "cmd",
+        "com.android.compos",
         "content",
         "cppreopts.sh", // generic_system
         "credstore",
