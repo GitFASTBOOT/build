@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04098eed_fabae253",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1878380
+      },
+      "writtenOn": "2024-12-10T19:55:39Z",
+      "side": 1,
+      "message": "aside: WDYT about removing this file? https://source.corp.google.com/h/googleplex-android/platform/superproject/main/+/main:build/make/tools/BUILD.bazel;bpv\u003d1",
+      "revId": "09676e81d52636969fedddd3ac21c94f566369fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
