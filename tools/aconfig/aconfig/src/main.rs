@@ -16,7 +16,7 @@
 
 //! `aconfig` is a build time tool to manage build time configurations, such as feature flags.
 
-use aconfig_storage_file::DEFAULT_FILE_VERSION;
+//use aconfig_storage_file::DEFAULT_FILE_VERSION;
 use aconfig_storage_file::MAX_SUPPORTED_FILE_VERSION;
 use anyhow::{anyhow, bail, Context, Result};
 use clap::{builder::ArgAction, builder::EnumValueParser, Arg, ArgMatches, Command};
@@ -333,8 +333,14 @@ fn main() -> Result<()> {
             write_output_to_file_or_stdout(path, &output)?;
         }
         Some(("create-storage", sub_matches)) => {
-            let version =
-                get_optional_arg::<u32>(sub_matches, "version").unwrap_or(&DEFAULT_FILE_VERSION);
+            // do not submit
+            let version = match get_optional_arg::<u32>(sub_matches, "version") {
+                Some(value) => value,
+                None => bail!("No version arg supplied."),
+            };
+            if *version == 1 {
+                bail!("version was set to 1???");
+            }
             if *version > MAX_SUPPORTED_FILE_VERSION {
                 bail!("Invalid version selected ({})", version);
             }
