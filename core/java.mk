@@ -140,7 +140,7 @@ ifneq ($(strip $(logtags_sources)),)
 logtags_java_sources := $(patsubst %.logtags,%.java,$(addprefix $(intermediates.COMMON)/logtags/, $(logtags_sources)))
 logtags_sources := $(addprefix $(LOCAL_PATH)/, $(logtags_sources))
 
-$(logtags_java_sources): $(intermediates.COMMON)/logtags/%.java: $(LOCAL_PATH)/%.logtags $(TARGET_OUT_COMMON_INTERMEDIATES)/all-event-log-tags.txt $(JAVATAGS) build/make/tools/event_log_tags.py
+$(logtags_java_sources): $(intermediates.COMMON)/logtags/%.java: $(LOCAL_PATH)/%.logtags $(TARGET_OUT_COMMON_INTERMEDIATES)/all-event-log-tags.txt $(JAVATAGS)
 	$(transform-logtags-to-java)
 
 else
