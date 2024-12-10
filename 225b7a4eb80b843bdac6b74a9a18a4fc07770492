@@ -22,6 +22,30 @@
       },
       "revId": "225b7a4eb80b843bdac6b74a9a18a4fc07770492",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ef920db_3cb32db0",
+        "filename": "target/product/generic/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1291338
+      },
+      "writtenOn": "2024-12-10T04:21:48Z",
+      "side": 1,
+      "message": "As you can see in the allow list, it\u0027s not the `com.android.compos` but `odex` and `vdex`. Although `com.android.compos` itself is installed to `system_ext/`, `odex` and `vdex` are still in `system/`.\n\nDoes this make sense?",
+      "parentUuid": "7072d572_76dcc65d",
+      "range": {
+        "startLine": 410,
+        "startChar": 9,
+        "endLine": 410,
+        "endChar": 29
+      },
+      "revId": "225b7a4eb80b843bdac6b74a9a18a4fc07770492",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
