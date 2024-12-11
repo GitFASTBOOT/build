@@ -306,7 +306,8 @@ class BuildPlannerTest(unittest.TestCase):
     build_planner = self.create_build_planner(
         build_targets=build_targets,
         build_context=self.create_build_context(
-            enabled_build_features=[{'name': self.get_target_flag('target_1')}]
+            enabled_build_features=[{'name': self.get_target_flag('target_1')}],
+            test_context=self.get_test_context(build_targets[0]),
         ),
     )
 
@@ -322,7 +323,8 @@ class BuildPlannerTest(unittest.TestCase):
     build_planner = self.create_build_planner(
         build_targets=build_targets,
         build_context=self.create_build_context(
-            enabled_build_features=[{'name': self.get_target_flag('target_1')}]
+            enabled_build_features=[{'name': self.get_target_flag('target_1')}],
+            test_context=self.get_test_context(build_targets[0]),
         ),
         packaging_commands=packaging_commands,
     )
