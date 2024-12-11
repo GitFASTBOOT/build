@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "327b2553_6e776340",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1944425
+      },
+      "writtenOn": "2024-12-11T15:56:54Z",
+      "side": 1,
+      "message": "sorry why do we think this is the culprit for this bug? in this bug it founds culprit, but not this one",
+      "range": {
+        "startLine": 11,
+        "startChar": 31,
+        "endLine": 11,
+        "endChar": 40
+      },
+      "revId": "e3c510e744058f40a163f792497bd4505c825644",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
