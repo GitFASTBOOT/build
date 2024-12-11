@@ -22,6 +22,30 @@
       },
       "revId": "e3c510e744058f40a163f792497bd4505c825644",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60941703_48bb5e0a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1981320
+      },
+      "writtenOn": "2024-12-11T18:26:37Z",
+      "side": 1,
+      "message": "the culprit is part of this topic and was validated using abtd. This is documented in the bug.\n\nBut: we will not land the revert. The test is no longer needed and will be deactivated. I will abandon the revert",
+      "parentUuid": "327b2553_6e776340",
+      "range": {
+        "startLine": 11,
+        "startChar": 31,
+        "endLine": 11,
+        "endChar": 40
+      },
+      "revId": "e3c510e744058f40a163f792497bd4505c825644",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
