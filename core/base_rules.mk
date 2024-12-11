@@ -391,7 +391,10 @@ endif
 ## logtags: Add .logtags files to global list
 ###########################################################
 
-logtags_sources := $(filter %.logtags,$(LOCAL_SRC_FILES)) $(LOCAL_LOGTAGS_FILES)
+logtags_sources := $(strip $(filter %.logtags,$(LOCAL_SRC_FILES)) $(LOCAL_LOGTAGS_FILES))
+ifdef logtags_sources
+  $(error Make modules cannot have logtag files: $(my_register_name), LOCAL_SRC_FILES: $(LOCAL_SRC_FILES), LOCAL_LOGTAGS_FILES: $(LOCAL_LOGTAGS_FILES))
+endif
 
 ifneq ($(strip $(logtags_sources) $(LOCAL_SOONG_LOGTAGS_FILES)),)
 event_log_tags := $(foreach f,$(LOCAL_SOONG_LOGTAGS_FILES) $(addprefix $(LOCAL_PATH)/,$(logtags_sources)),$(call clean-path,$(f)))
@@ -1228,6 +1231,8 @@ ifdef event_log_tags
   ALL_MODULES.$(my_register_name).EVENT_LOG_TAGS := \
       $(ALL_MODULES.$(my_register_name).EVENT_LOG_TAGS) $(event_log_tags)
 endif
+
+ALL_MODULES.$(my_register_name).PARTITION_TAG := $(actual_partition_tag)
 
 ALL_MODULES.$(my_register_name).MAKEFILE := \
     $(ALL_MODULES.$(my_register_name).MAKEFILE) $(LOCAL_MODULE_MAKEFILE)

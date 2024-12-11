@@ -31,6 +31,7 @@ warnings = []
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('-o', dest='output_file')
+parser.add_argument('--duplicates-ok', action='store_true', help='Don\'t warn on duplicate tags')
 parser.add_argument('files', nargs='*')
 args = parser.parse_args()
 
@@ -62,9 +63,10 @@ for fn in args.files:
         # if the name and description are identical, issue a warning
         # instead of failing (to make it easier to move tags between
         # projects without breaking the build).
-        tagfile.AddWarning("tag \"%s\" (%s) duplicated in %s:%d" %
-                           (t.tagname, t.tagnum, orig.filename, orig.linenum),
-                           linenum=t.linenum)
+        if not args.duplicates_ok:
+          tagfile.AddWarning("tag \"%s\" (%s) duplicated in %s:%d" %
+                             (t.tagname, t.tagnum, orig.filename, orig.linenum),
+                             linenum=t.linenum)
       else:
         tagfile.AddError(
             "tag name \"%s\" used by conflicting tag %s from %s:%d" %

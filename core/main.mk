@@ -1461,7 +1461,8 @@ droidcore-unbundled: $(filter $(HOST_OUT_ROOT)/%,$(modules_to_install)) \
     $(INSTALLED_FILES_JSON_ROOT) \
     $(INSTALLED_FILES_FILE_RECOVERY) \
     $(INSTALLED_FILES_JSON_RECOVERY) \
-    $(INSTALLED_ANDROID_INFO_TXT_TARGET)
+    $(INSTALLED_ANDROID_INFO_TXT_TARGET) \
+    $(MERGED_EVENT_LOG_TAGS_FILE)
 
 # The droidcore target depends on the droidcore-unbundled subset and any other
 # targets for a non-unbundled (full source) full system build.

@@ -970,33 +970,57 @@ systemimage:
 
 # -----------------------------------------------------------------
 
-event_log_tags_file := $(TARGET_OUT)/etc/event-log-tags
+event_log_tags_src_system :=
+event_log_tags_src_system_ext :=
+event_log_tags_src_product :=
+event_log_tags_src_vendor :=
+$(foreach m, $(call product-installed-modules,$(INTERNAL_PRODUCT)), \
+  $(if $(ALL_MODULES.$(m).EVENT_LOG_TAGS), \
+    $(if $(filter system,$(ALL_MODULES.$(m).PARTITION_TAG)), \
+      $(eval event_log_tags_src_system += $(ALL_MODULES.$(m).EVENT_LOG_TAGS)), \
+      $(if $(filter system_ext,$(ALL_MODULES.$(m).PARTITION_TAG)), \
+        $(eval event_log_tags_src_system_ext += $(ALL_MODULES.$(m).EVENT_LOG_TAGS)), \
+        $(if $(filter product,$(ALL_MODULES.$(m).PARTITION_TAG)), \
+          $(eval event_log_tags_src_product += $(ALL_MODULES.$(m).EVENT_LOG_TAGS)), \
+          $(if $(filter vendor,$(ALL_MODULES.$(m).PARTITION_TAG)), \
+            $(eval event_log_tags_src_vendor += $(ALL_MODULES.$(m).EVENT_LOG_TAGS)), \
+            $(error $(m): has event log tag files, but not installed to one of system, system_ext, product, vendor. Installed to: $(ALL_MODULES.$(m).PARTITION_TAG))))))))
+event_log_tags_src_system := $(sort $(event_log_tags_src_system))
+event_log_tags_src_system_ext := $(sort $(event_log_tags_src_system_ext))
+event_log_tags_src_product := $(sort $(event_log_tags_src_product))
+event_log_tags_src_vendor := $(sort $(event_log_tags_src_vendor))
 
-# Include tags from all packages that we know about
-all_event_log_tags_src := \
-    $(sort $(foreach m, $(ALL_MODULES), $(ALL_MODULES.$(m).EVENT_LOG_TAGS)))
+define create-event-log-tags-file
+$(1): PRIVATE_SRC_FILES := $(2)
+$(1): $(MERGETAGS) $(2)
+	$(hide) mkdir -p $$(dir $$@)
+	$(hide) $(MERGETAGS) -o $$@ $$(PRIVATE_SRC_FILES)
+ALL_DEFAULT_INSTALLED_MODULES += $(1)
+$(eval $(call declare-0p-target,$(1)))
+endef
+$(eval $(call create-event-log-tags-file,$(TARGET_OUT)/etc/event-log-tags,$(event_log_tags_src_system)))
+$(eval $(call create-event-log-tags-file,$(TARGET_OUT_SYSTEM_EXT)/etc/event-log-tags,$(event_log_tags_src_system_ext)))
+$(eval $(call create-event-log-tags-file,$(TARGET_OUT_PRODUCT)/etc/event-log-tags,$(event_log_tags_src_product)))
+$(eval $(call create-event-log-tags-file,$(TARGET_OUT_VENDOR)/etc/event-log-tags,$(event_log_tags_src_vendor)))
 
-# Include tags from all packages included in this product, plus all
-# tags that are part of the system (ie, not in a vendor/ or device/
-# directory).
-event_log_tags_src := \
-    $(sort $(foreach m,\
-      $(call resolve-bitness-for-modules,TARGET,$(PRODUCT_PACKAGES)) \
-      $(call module-names-for-tag-list,user), \
-      $(ALL_MODULES.$(m).EVENT_LOG_TAGS)) \
-      $(filter-out vendor/% device/% out/%,$(all_event_log_tags_src)))
-
-$(event_log_tags_file): PRIVATE_SRC_FILES := $(event_log_tags_src)
-$(event_log_tags_file): $(event_log_tags_src) $(MERGETAGS)
-	$(hide) mkdir -p $(dir $@)
-	$(hide) $(MERGETAGS) -o $@ $(PRIVATE_SRC_FILES)
-
-$(eval $(call declare-0p-target,$(event_log_tags_file)))
+# The merged event log tags file is just to check that you don't have conflicting tags across
+# the different partitions, it's not actually installed on device. It's built as a dependency of
+# droidcore-unbundled.
+MERGED_EVENT_LOG_TAGS_FILE := $(TARGET_OUT_COMMON_INTERMEDIATES)/merged_event_log_tags_file
+all_event_log_tag_files := $(TARGET_OUT)/etc/event-log-tags $(TARGET_OUT_SYSTEM_EXT)/etc/event-log-tags $(TARGET_OUT_PRODUCT)/etc/event-log-tags $(TARGET_OUT_VENDOR)/etc/event-log-tags
+$(MERGED_EVENT_LOG_TAGS_FILE): PRIVATE_SRC_FILES := $(all_event_log_tag_files)
+$(MERGED_EVENT_LOG_TAGS_FILE): $(MERGETAGS) $(all_event_log_tag_files)
+	$(MERGETAGS) --duplicates-ok -o $@ $(PRIVATE_SRC_FILES)
 
 .PHONY: event-log-tags
-event-log-tags: $(event_log_tags_file)
+event-log-tags: $(MERGED_EVENT_LOG_TAGS_FILE)
 
-ALL_DEFAULT_INSTALLED_MODULES += $(event_log_tags_file)
+create-event-log-tags-file :=
+all_event_log_tag_files :=
+event_log_tags_src_system :=
+event_log_tags_src_system_ext :=
+event_log_tags_src_product :=
+event_log_tags_src_vendor :=
 
 # Initialize INSTALLED_FILES_OUTSIDE_IMAGES with the list of all device files,
 # files installed in images will be filtered out later.
