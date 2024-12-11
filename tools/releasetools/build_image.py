@@ -992,6 +992,7 @@ def main(argv):
     # The caller knows the mount point and provides a dictionary needed by
     # BuildImage().
     image_properties = glob_dict
+    image_properties["timestamp"] = FIXED_FILE_TIMESTAMP
   else:
     image_filename = os.path.basename(args.out_file)
     mount_point = ""
