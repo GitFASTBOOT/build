@@ -408,6 +408,23 @@
       "message": "Resolved",
       "revId": "256b14b2f868223e9adcdd355acffb950b230fb1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d7e0bcf_abd232bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3785083
+      },
+      "writtenOn": "2024-12-12T23:50:16Z",
+      "side": 1,
+      "message": "Problème solved..",
+      "revId": "256b14b2f868223e9adcdd355acffb950b230fb1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
