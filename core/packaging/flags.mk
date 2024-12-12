@@ -110,10 +110,11 @@ define generate-partition-aconfig-storage-file
 $(eval $(strip $(1)): PRIVATE_OUT := $(strip $(1)))
 $(eval $(strip $(1)): PRIVATE_IN := $(strip $(9)))
 
+ifeq ($(RELEASE_FINGERPRINT_ACONFIG_PACKAGES),true)
 STORAGE_FILE_VERSION := 2
-# ifeq ($(RELEASE_FINGERPRINT_ACONFIG_PACKAGES),true)
-# STORAGE_FILE_VERSION := 2
-# endif
+else
+STORAGE_FILE_VERSION := 1
+endif
 
 $(strip $(1)): $(ACONFIG) $(strip $(9))
 	mkdir -p $$(dir $$(PRIVATE_OUT))
