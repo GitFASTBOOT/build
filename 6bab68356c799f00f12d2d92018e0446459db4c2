@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52799be4_646ba688",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1890055
+      },
+      "writtenOn": "2024-12-12T21:23:26Z",
+      "side": 1,
+      "message": "nit: does this read better without the re-definition?\n\n```suggestion\nifeq ($(RELEASE_FINGERPRINT_ACONFIG_PACKAGES),true)\nSTORAGE_FILE_VERSION :\u003d 2\nelse\nSTORAGE_FILE_VERSION :\u003d 1\nendif\n```",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 5
+      },
+      "revId": "6bab68356c799f00f12d2d92018e0446459db4c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
