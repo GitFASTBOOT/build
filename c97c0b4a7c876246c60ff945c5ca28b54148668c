@@ -57,6 +57,30 @@
       },
       "revId": "c97c0b4a7c876246c60ff945c5ca28b54148668c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3ce605e_9339925b",
+        "filename": "core/layoutlib_data.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1064724
+      },
+      "writtenOn": "2024-12-12T13:03:09Z",
+      "side": 1,
+      "message": "I didn\u0027t include those as they contain no relevant information for me. I am only interested in device cutout information.",
+      "parentUuid": "0b5c4f64_80723a52",
+      "range": {
+        "startLine": 78,
+        "startChar": 17,
+        "endLine": 78,
+        "endChar": 54
+      },
+      "revId": "c97c0b4a7c876246c60ff945c5ca28b54148668c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
