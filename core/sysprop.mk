@@ -122,11 +122,18 @@ $(2): $(POST_PROCESS_PROPS) $(INTERNAL_BUILD_ID_MAKEFILE) $(3) $(6) $(BUILT_KERN
 ifneq ($(strip $(7)), true)
 	$(hide) $$(call generate-common-build-props,$(call to-lower,$(strip $(1))),$$@)
 endif
+        # Make and Soong use different intermediate android_info.prop files to build vendor/build.prop.
+        # Although the sysprop contents are same, the absolute paths of android_info.prop are different.
+        # Remove the absolute path for android_info.prop. This helps with validating mk->soong migration of android partitions.
 	$(hide) $(foreach file,$(strip $(3)),\
 	    if [ -f "$(file)" ]; then\
 	        echo "" >> $$@;\
 	        echo "####################################" >> $$@;\
-	        echo "# from $(file)" >> $$@;\
+	        $(if $(findstring android_info.prop,$(file)), \
+		echo "# from android_info.prop" >> $$@;\
+		,\
+		echo "# from $(file)" >> $$@;\
+		)\
 	        echo "####################################" >> $$@;\
 	        cat $(file) >> $$@;\
 	    fi;)
