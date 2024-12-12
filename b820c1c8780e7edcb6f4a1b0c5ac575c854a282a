@@ -16,6 +16,24 @@
       "message": "Do we not need https://github.com/llvm/llvm-project/pull/111918 as well? Or does this work because \"all\" the code is instrumented?",
       "revId": "b820c1c8780e7edcb6f4a1b0c5ac575c854a282a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "586b5b81_95ef8e6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2024-12-12T10:28:47Z",
+      "side": 1,
+      "message": "Yes, that would only be a problem if we link together stuff that has globals enabled and not enabled.",
+      "parentUuid": "f35c3fff_303d77b2",
+      "revId": "b820c1c8780e7edcb6f4a1b0c5ac575c854a282a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
