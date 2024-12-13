@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eae773ef_349de8a8",
+        "filename": "tools/releasetools/build_image.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1001,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2024-12-13T01:56:59Z",
+      "side": 1,
+      "message": "Use `if args.build_datetime_file` instead. We would want to know if there was an issue that caused the build datetime file to not be present.",
+      "revId": "ecca261fca5b6417d1eae97ea3f80ebee2775c82",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
