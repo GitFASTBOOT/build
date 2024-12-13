@@ -34,6 +34,24 @@
       "parentUuid": "b1016a14_5706d89a",
       "revId": "c39382a53161b0e98ada66ae7121bac031ccfaf7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02ed3ac5_7b29f121",
+        "filename": "core/sysprop.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2024-12-13T19:42:24Z",
+      "side": 1,
+      "message": "I guess you could only do the basename if it\u0027s a generated file. (starts with `$(OUT_DIR)`). Then at least the source files will have the full path, and we could probably make sure any generated files have different basenames so they\u0027re recognizable.",
+      "parentUuid": "babeedce_0c89be3a",
+      "revId": "c39382a53161b0e98ada66ae7121bac031ccfaf7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
