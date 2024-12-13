@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b585d8e0_b85f6fc0",
+        "filename": "core/sysprop.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2024-12-13T21:28:50Z",
+      "side": 1,
+      "message": "```suggestion\n\t        $(if $(filter $(OUT_DIR)/%,$(file)), \\\n```",
+      "revId": "47121ed3fd134d49e7afc3cd8d027aad447bb221",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
