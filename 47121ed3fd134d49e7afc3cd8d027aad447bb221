@@ -16,6 +16,24 @@
       "message": "```suggestion\n\t        $(if $(filter $(OUT_DIR)/%,$(file)), \\\n```",
       "revId": "47121ed3fd134d49e7afc3cd8d027aad447bb221",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb2e56d0_65fe2aef",
+        "filename": "core/sysprop.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1878380
+      },
+      "writtenOn": "2024-12-13T21:33:39Z",
+      "side": 1,
+      "message": "Good catch, done.",
+      "parentUuid": "b585d8e0_b85f6fc0",
+      "revId": "47121ed3fd134d49e7afc3cd8d027aad447bb221",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
