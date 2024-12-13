@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a87cd92e_9da04281",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1878380
+      },
+      "writtenOn": "2024-12-13T23:28:45Z",
+      "side": 1,
+      "message": "Does the make built system/etc/linker.config.pb change after this CL? The new command seems to be equivalent to the command at ToT.",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 51
+      },
+      "revId": "b186569ef00ff2f2a1fab28aedc75ebc32bcd67b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
