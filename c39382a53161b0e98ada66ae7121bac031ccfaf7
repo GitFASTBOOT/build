@@ -16,6 +16,24 @@
       "message": "I would just always do `# from $(basename $(file))`. It seems android_info.prop is the only prop file other than a vendor prop file that exists in some circumstances, which will probably have the same problem if it\u0027s used. So let\u0027s just normalize all filenames.",
       "revId": "c39382a53161b0e98ada66ae7121bac031ccfaf7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "babeedce_0c89be3a",
+        "filename": "core/sysprop.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1878380
+      },
+      "writtenOn": "2024-12-13T19:39:23Z",
+      "side": 1,
+      "message": "I think always using basename might be confusing if two prop files have the same name (e.g. the files in `TARGET_VENDOR_PROP`)",
+      "parentUuid": "b1016a14_5706d89a",
+      "revId": "c39382a53161b0e98ada66ae7121bac031ccfaf7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
