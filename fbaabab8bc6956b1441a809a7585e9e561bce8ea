@@ -46,6 +46,30 @@
       },
       "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f761c8b9_b9b97517",
+        "filename": "tools/check_elf_file.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-12-16T16:54:08Z",
+      "side": 1,
+      "message": "(like, anyone may add cc_prebuilt, and put it in a custom firmware folder, without setting the correct bitness, and getting it propagated from Soong - if 2nd arch is not empty, we still require 16 KB alignment this year)",
+      "parentUuid": "26ecba7d_3d951501",
+      "range": {
+        "startLine": 488,
+        "startChar": 8,
+        "endLine": 488,
+        "endChar": 36
+      },
+      "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
