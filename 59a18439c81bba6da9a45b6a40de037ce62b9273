@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53473cf9_25da3b12",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1962375
+      },
+      "writtenOn": "2024-12-16T22:42:08Z",
+      "side": 1,
+      "message": "Seems like it was deleted recently with https://r.android.com/3403427",
+      "revId": "59a18439c81bba6da9a45b6a40de037ce62b9273",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
