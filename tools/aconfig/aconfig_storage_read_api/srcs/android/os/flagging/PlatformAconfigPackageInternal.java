@@ -107,7 +107,11 @@ public class PlatformAconfigPackageInternal {
                                     + packageName
                                     + " in container "
                                     + container
-                                    + " cannot be found on the device"));
+                                    + " cannot be found on the device;"
+                                    + " package fingerprint="
+                                    + packageFingerprint
+                                    + " and node fingerprint="
+                                    + pNode.getPackageFingerprint()));
         }
 
         return new PlatformAconfigPackageInternal(vList, pNode.getBooleanStartIndex());
