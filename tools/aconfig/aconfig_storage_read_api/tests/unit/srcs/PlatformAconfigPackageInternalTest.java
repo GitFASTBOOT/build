@@ -21,9 +21,9 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
-import android.aconfig.storage.AconfigStorageException;
 import android.aconfig.storage.PackageTable;
 import android.aconfig.storage.StorageFileProvider;
+import android.os.flagging.AconfigStorageReadException;
 import android.os.flagging.PlatformAconfigPackageInternal;
 
 import org.junit.Before;
@@ -62,44 +62,44 @@ public class PlatformAconfigPackageInternalTest {
         PackageTable.Node node1 = packageTable.get("com.android.aconfig.storage.test_1");
         long fingerprint = node1.getPackageFingerprint();
         // cannot find package
-        AconfigStorageException e =
+        AconfigStorageReadException e =
                 assertThrows(
-                        AconfigStorageException.class,
+                        AconfigStorageReadException.class,
                         () ->
                                 PlatformAconfigPackageInternal.load(
                                         "mockup",
                                         "com.android.aconfig.storage.test_10",
                                         fingerprint,
                                         pr));
-        assertEquals(AconfigStorageException.ERROR_PACKAGE_NOT_FOUND, e.getErrorCode());
+        assertEquals(AconfigStorageReadException.ERROR_PACKAGE_NOT_FOUND, e.getErrorCode());
 
         // cannot find container
         e =
                 assertThrows(
-                        AconfigStorageException.class,
+                        AconfigStorageReadException.class,
                         () ->
                                 PlatformAconfigPackageInternal.load(
                                         null,
                                         "com.android.aconfig.storage.test_1",
                                         fingerprint,
                                         pr));
-        assertEquals(AconfigStorageException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
+        assertEquals(AconfigStorageReadException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
 
         e =
                 assertThrows(
-                        AconfigStorageException.class,
+                        AconfigStorageReadException.class,
                         () ->
                                 PlatformAconfigPackageInternal.load(
                                         "test",
                                         "com.android.aconfig.storage.test_1",
                                         fingerprint,
                                         pr));
-        assertEquals(AconfigStorageException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
+        assertEquals(AconfigStorageReadException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
 
         // fingerprint doesn't match
         e =
                 assertThrows(
-                        AconfigStorageException.class,
+                        AconfigStorageReadException.class,
                         () ->
                                 PlatformAconfigPackageInternal.load(
                                         "mockup",
@@ -114,27 +114,27 @@ public class PlatformAconfigPackageInternalTest {
         pr = new StorageFileProvider("fake/path/", "fake/path/");
         e =
                 assertThrows(
-                        AconfigStorageException.class,
+                        AconfigStorageReadException.class,
                         () ->
                                 PlatformAconfigPackageInternal.load(
                                         "mockup",
                                         "com.android.aconfig.storage.test_1",
                                         fingerprint,
                                         pr));
-        assertEquals(AconfigStorageException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
+        assertEquals(AconfigStorageReadException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
 
         // file read issue
         pr = new StorageFileProvider(TESTDATA_PATH, "fake/path/");
         e =
                 assertThrows(
-                        AconfigStorageException.class,
+                        AconfigStorageReadException.class,
                         () ->
                                 PlatformAconfigPackageInternal.load(
                                         "mockup",
                                         "com.android.aconfig.storage.test_1",
                                         fingerprint,
                                         pr));
-        assertEquals(AconfigStorageException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
+        assertEquals(AconfigStorageReadException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
     }
 
     @Test
