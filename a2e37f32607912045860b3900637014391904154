@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fcceb56c_c17e4b58",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1962375
+      },
+      "writtenOn": "2024-12-16T19:42:20Z",
+      "side": 1,
+      "message": "```suggestion\nifneq (,$(RELEASE_FINGERPRINT_ACONFIG_PACKAGES))\n```\nper https://android-review.git.corp.google.com/c/platform/build/soong/+/3393379/comment/84d4ab7d_85d291c4/",
+      "revId": "a2e37f32607912045860b3900637014391904154",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
