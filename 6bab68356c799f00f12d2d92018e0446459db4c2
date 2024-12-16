@@ -22,6 +22,30 @@
       },
       "revId": "6bab68356c799f00f12d2d92018e0446459db4c2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f743bdfd_5639a12c",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 3599662
+      },
+      "writtenOn": "2024-12-16T19:15:07Z",
+      "side": 1,
+      "message": "thank you - didn\u0027t realize all variables in makefiles have global scope!",
+      "parentUuid": "52799be4_646ba688",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 5
+      },
+      "revId": "6bab68356c799f00f12d2d92018e0446459db4c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
