@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de8ebec8_e0d172a0",
+        "filename": "tools/aconfig/aconfig_storage_read_api/srcs/android/os/flagging/PlatformAconfigPackage.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 3599662
+      },
+      "writtenOn": "2024-12-16T22:19:59Z",
+      "side": 1,
+      "message": "this might also be helpeful to have in the logs for when we\u0027re debugging",
+      "range": {
+        "startLine": 135,
+        "startChar": 19,
+        "endLine": 135,
+        "endChar": 31
+      },
+      "revId": "4391ce1860b26f41c99c368718eeb9ff91e180f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
