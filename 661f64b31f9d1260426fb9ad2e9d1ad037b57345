@@ -22,6 +22,30 @@
       },
       "revId": "661f64b31f9d1260426fb9ad2e9d1ad037b57345",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5998932f_48fcf635",
+        "filename": "tools/aconfig/aconfig_storage_read_api/srcs/android/os/flagging/PlatformAconfigPackage.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1944425
+      },
+      "writtenOn": "2024-12-16T22:30:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a1da2bbe_ce9497f7",
+      "range": {
+        "startLine": 73,
+        "startChar": 16,
+        "endLine": 73,
+        "endChar": 23
+      },
+      "revId": "661f64b31f9d1260426fb9ad2e9d1ad037b57345",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
