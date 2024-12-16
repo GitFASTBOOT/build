@@ -22,6 +22,30 @@
       },
       "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26ecba7d_3d951501",
+        "filename": "tools/check_elf_file.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-12-16T16:53:11Z",
+      "side": 1,
+      "message": "I agree with you from an architectural perspective. However, prebuilts aren\u0027t always guaranteed with the right bitness, so I was worried this would create more errors.",
+      "parentUuid": "aae4e8eb_34a93a81",
+      "range": {
+        "startLine": 488,
+        "startChar": 8,
+        "endLine": 488,
+        "endChar": 36
+      },
+      "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
