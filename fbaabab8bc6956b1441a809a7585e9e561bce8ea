@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aae4e8eb_34a93a81",
+        "filename": "tools/check_elf_file.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-12-16T08:31:49Z",
+      "side": 1,
+      "message": "I am okay with the exception here. It might be better to implement it in mk. For example,\n\n```\n# LOCAL_2ND_ARCH_VAR_PREFIX is empty for 1st arch; \"2ND_\" for 2nd arch.\n$(check_elf_files_stamp): PRIVATE_MAX_PAGE_SIZE :\u003d $(TARGET_$(LOCAL_2ND_ARCH_VAR_PREFIX)MAX_PAGE_SIZE_SUPPORTED)\n```",
+      "range": {
+        "startLine": 488,
+        "startChar": 8,
+        "endLine": 488,
+        "endChar": 36
+      },
+      "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
