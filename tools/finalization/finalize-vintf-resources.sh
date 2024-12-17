@@ -39,7 +39,6 @@ function create_new_compat_matrix_and_kernel_configs() {
     local CURRENT_RELEASE_LETTER="$FINAL_CORRESPONDING_VERSION_LETTER"
     local NEXT_RELEASE_LETTER="$FINAL_NEXT_CORRESPONDING_VERSION_LETTER"
 
-
     # build the targets required before touching the Android.bp/Android.mk files
     local build_cmd="$top/build/soong/soong_ui.bash --make-mode"
     $build_cmd bpmodify
