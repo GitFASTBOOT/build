@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d467ab14_4b7ae7c4",
+        "filename": "tools/missing_module_info.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2024-12-17T18:43:39Z",
+      "side": 1,
+      "message": "Maybe rename to missing_soong_module_info.py?",
+      "revId": "80e794e7a1a1a2d5c07d8f0269a112c598545697",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
