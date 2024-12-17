@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27965900_89658a68",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1644679
+      },
+      "writtenOn": "2024-12-17T23:14:59Z",
+      "side": 1,
+      "message": "http://b/384444859 for the presubmit boot_test failures - not fixed yet",
+      "revId": "bf0a040bd75cf6e633f967ab85d4904f99d8d333",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
