@@ -111,6 +111,30 @@
       },
       "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "540d4c3f_95b5ab49",
+        "filename": "tools/check_elf_file.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-12-17T02:57:21Z",
+      "side": 1,
+      "message": "Yes. We don\u0027t need to make any requirement of alignment in 32-bit mode.\n\n\u003e 64-bit firmware libraries must be aligned to 16k, according to this check.\n\nWe could remove this case as well if it is an issue.",
+      "parentUuid": "408ed507_5295c4ac",
+      "range": {
+        "startLine": 488,
+        "startChar": 8,
+        "endLine": 488,
+        "endChar": 36
+      },
+      "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
