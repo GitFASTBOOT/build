@@ -37,7 +37,7 @@ function create_new_compat_matrix_and_kernel_configs() {
     local NEXT_COMPATIBILITY_MATRIX_LEVEL='202504'
     # The kernel configs need the letter of the Android release
     local CURRENT_RELEASE_LETTER='v'
-    local NEXT_RELEASE_LETTER='w'
+    local NEXT_RELEASE_LETTER='b'
 
 
     # build the targets required before touching the Android.bp/Android.mk files
