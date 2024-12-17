@@ -16,6 +16,23 @@
       "message": "Upstream from Meta 😊",
       "revId": "1dd4f61d65085b4626924bf71818a8314052317d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e64e9aa_5bcc6a23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1903905
+      },
+      "writtenOn": "2024-12-17T00:09:42Z",
+      "side": 1,
+      "message": "For more context, previous submission/discussion was here: https://android-review.googlesource.com/c/platform/build/+/2817736\n\nI ran out of time to shepherd this; response was generally favorable but there were a few followup comments to address, IIRC.",
+      "revId": "1dd4f61d65085b4626924bf71818a8314052317d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
