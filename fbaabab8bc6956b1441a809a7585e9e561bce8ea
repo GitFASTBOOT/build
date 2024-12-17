@@ -87,6 +87,30 @@
       },
       "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "408ed507_5295c4ac",
+        "filename": "tools/check_elf_file.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 1130827
+      },
+      "writtenOn": "2024-12-17T02:44:59Z",
+      "side": 1,
+      "message": "I\u0027d like to confirm:\n32-bit Android libraries on 32-bit + 64-bit devices must be aligned to 16k.\n32-bit Android libraries on 32-bit devices must be aligned to 4k.\n64-bit firmware libraries must be aligned to 16k, according to this check.\n32-bit firmware libraries on 32-bit + 64-bit devices do not have to be aligned to 16k. I assume that they have been aligned to 4k, so I think leaving TARGET_2ND_MAX_PAGE_SIZE_SUPPORTED empty would not result in extra errors.",
+      "parentUuid": "f761c8b9_b9b97517",
+      "range": {
+        "startLine": 488,
+        "startChar": 8,
+        "endLine": 488,
+        "endChar": 36
+      },
+      "revId": "fbaabab8bc6956b1441a809a7585e9e561bce8ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
