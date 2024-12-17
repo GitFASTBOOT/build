@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67bda570_3c67dd06",
+        "filename": "tools/aconfig/aconfig/src/commands.rs",
+        "patchSetId": 3
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 3599662
+      },
+      "writtenOn": "2024-12-17T18:07:31Z",
+      "side": 1,
+      "message": "product",
+      "range": {
+        "startLine": 479,
+        "startChar": 56,
+        "endLine": 479,
+        "endChar": 62
+      },
+      "revId": "4c635d851e980bfb7a16d6d1ae6f3ebae5677c47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
