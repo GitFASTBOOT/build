@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a56c496_5e607cb4",
+        "filename": "core/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5461,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2024-12-18T18:15:41Z",
+      "side": 0,
+      "message": "This needs to be converted to soong as well, or maintained in make.",
+      "range": {
+        "startLine": 5445,
+        "startChar": 0,
+        "endLine": 5461,
+        "endChar": 34
+      },
+      "revId": "34c2b8604ecebe5d4786b7a5bf6776ac6eff074c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
