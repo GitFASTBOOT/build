@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c91485ef_2d71a6c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1415877
+      },
+      "writtenOn": "2024-12-18T07:19:12Z",
+      "side": 1,
+      "message": "`test_legacy_apex` is still failing, but it should be fixed with aosp/3419109.",
+      "revId": "7be88faa28894f63e5f579bc7e073aca50f259bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
