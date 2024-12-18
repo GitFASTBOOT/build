@@ -16,6 +16,29 @@
       "message": "http://b/384444859 for the presubmit boot_test failures - not fixed yet",
       "revId": "bf0a040bd75cf6e633f967ab85d4904f99d8d333",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e44bfbeb_e7666592",
+        "filename": "tools/finalization/environment.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2024-12-18T00:49:01Z",
+      "side": 1,
+      "message": "Let\u0027s update this as `C`\nIt will be used in `kernel/configs/tools/bump.py` to prepare the next kernel config after the finalization.",
+      "range": {
+        "startLine": 36,
+        "startChar": 48,
+        "endLine": 36,
+        "endChar": 49
+      },
+      "revId": "bf0a040bd75cf6e633f967ab85d4904f99d8d333",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
