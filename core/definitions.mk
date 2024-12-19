@@ -3674,6 +3674,12 @@ endef
 # Requires for each suite: use my_compat_dist_config_$(suite) to define the test config.
 #    and use my_compat_dist_$(suite) to define the others.
 define create-suite-dependencies
+$(if $(filter $(LOCAL_MODULE),$(CTS_VERIFIER_PACKAGES)),\
+  $(if $(LOCAL_SOONG_CLASSES_JAR),\
+    $(if $(filter cts-verifier,$(ALL_COMPATIBILITY_SUITES)),,\
+      $(eval ALL_COMPATIBILITY_SUITES += cts-verifier) \
+      $(eval COMPATIBILITY.cts-verifier.API_MAP_FILES := )) \
+    $(eval COMPATIBILITY.cts-verifier.API_MAP_FILES += $(LOCAL_SOONG_CLASSES_JAR)),),) \
 $(foreach suite, $(LOCAL_COMPATIBILITY_SUITE), \
   $(eval $(if $(strip $(module_license_metadata)),\
     $$(foreach f,$$(my_compat_dist_$(suite)),$$(call declare-copy-target-license-metadata,$$(call word-colon,2,$$(f)),$$(call word-colon,1,$$(f)))),\
