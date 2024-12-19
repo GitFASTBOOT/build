@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "56c7e2ce_9720721b",
+        "filename": "core/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5443,
+      "author": {
+        "id": 1960090
+      },
+      "writtenOn": "2024-12-19T19:15:22Z",
+      "side": 0,
+      "message": "`BUILT_KERNEL_VERSION_FILE` is an intermediate file that contains the kernel version. I think we can just use the kernel version directly for the `BUILT_KERNEL_VERSION_FILE_FOR_UFFD_GC`, so that we don\u0027t need to locate `BUILT_KERNEL_VERSION_FILE` (e.g. out/target/product/vsoc_x86_64/obj/PACKAGING/check_vintf_all_intermediates/kernel_version.txt)?",
+      "parentUuid": "d8296a80_061bef38",
+      "revId": "34c2b8604ecebe5d4786b7a5bf6776ac6eff074c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8a56c496_5e607cb4",
         "filename": "core/Makefile",
         "patchSetId": 1
@@ -31,6 +49,30 @@
       "writtenOn": "2024-12-18T18:15:41Z",
       "side": 0,
       "message": "This needs to be converted to soong as well, or maintained in make.",
+      "range": {
+        "startLine": 5445,
+        "startChar": 0,
+        "endLine": 5461,
+        "endChar": 34
+      },
+      "revId": "34c2b8604ecebe5d4786b7a5bf6776ac6eff074c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9d7c88e_fe90c21f",
+        "filename": "core/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5461,
+      "author": {
+        "id": 1960090
+      },
+      "writtenOn": "2024-12-19T19:15:22Z",
+      "side": 0,
+      "message": "Done. I have added this part in the other cl in this topic aosp/3419519.",
+      "parentUuid": "8a56c496_5e607cb4",
       "range": {
         "startLine": 5445,
         "startChar": 0,
