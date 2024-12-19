@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3dce30d1_e81b08ff",
+        "filename": "core/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5443,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2024-12-19T19:43:03Z",
+      "side": 0,
+      "message": "But there\u0027s logic above to extract the kernel version from the actual kernel if `BOARD_KERNEL_VERSION` is not set, which is not covered in the current soong cl.",
+      "parentUuid": "56c7e2ce_9720721b",
+      "revId": "34c2b8604ecebe5d4786b7a5bf6776ac6eff074c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8a56c496_5e607cb4",
         "filename": "core/Makefile",
         "patchSetId": 1
