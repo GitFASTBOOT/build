@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92ac3c81_fa386f79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1897543
+      },
+      "writtenOn": "2024-12-19T03:13:14Z",
+      "side": 1,
+      "message": "@kgui@google.com\n\nThe target will be renamed to cts-api-map-report.xml",
+      "revId": "818f671861147bb797d14e78bdcb743bc0f001f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
