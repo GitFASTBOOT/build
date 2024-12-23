@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "860d4ce0_21d665f6",
+        "filename": "target/product/generic/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2024-12-23T07:29:01Z",
+      "side": 1,
+      "message": "This is from `base_system_ext.mk`.\nCan we define `android_filesystem_defaults` for `system_ext_image_defaults` and include the default to gsi?\n\nI think we need to build system_ext from soong for other targets to build SSI. Defining `system_ext_image_defaults` is required to start that work.",
+      "range": {
+        "startLine": 350,
+        "startChar": 31,
+        "endLine": 350,
+        "endChar": 58
+      },
+      "revId": "8bea870f817b1fb15a75e1821dd52cfaeee37828",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
