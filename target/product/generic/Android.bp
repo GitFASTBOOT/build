@@ -346,6 +346,17 @@ phony {
 }
 
 android_filesystem_defaults {
+    name: "system_ext_app_function_extensions_defaults",
+    deps: select(release_flag("RELEASE_APPFUNCTION_SIDECAR"), {
+        true: [
+            "com.android.extensions.appfunctions",
+            "appfunctions.extension.xml",
+        ],
+        default: [],
+    }),
+}
+
+android_filesystem_defaults {
     name: "system_image_defaults",
     partition_name: "system",
     base_dir: "system",

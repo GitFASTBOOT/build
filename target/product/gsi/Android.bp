@@ -83,7 +83,10 @@ gsi_symlinks = [
 
 android_system_image {
     name: "android_gsi",
-    defaults: ["system_image_defaults"],
+    defaults: [
+        "system_image_defaults",
+        "system_ext_app_function_extensions_defaults",
+    ],
     symlinks: gsi_symlinks,
     dirs: ["cache"],
     deps: [
