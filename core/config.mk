@@ -1378,11 +1378,11 @@ ifeq (,$(strip $(BUILD_THUMBPRINT)))
   BUILD_THUMBPRINT := $(PLATFORM_VERSION)/$(BUILD_ID)/$(BUILD_NUMBER_FROM_FILE):$(TARGET_BUILD_VARIANT)/$(BUILD_VERSION_TAGS)
 endif
 
-BUILD_THUMBPRINT_FILE := $(PRODUCT_OUT)/build_thumbprint.txt
+BUILD_THUMBPRINT_FILE := $(GENERIC_OUT)/build_thumbprint.txt
 ifeq ($(strip $(HAS_BUILD_NUMBER)),true)
 $(BUILD_THUMBPRINT_FILE): $(BUILD_NUMBER_FILE)
 endif
-ifneq (,$(shell mkdir -p $(PRODUCT_OUT) && echo $(BUILD_THUMBPRINT) >$(BUILD_THUMBPRINT_FILE) && grep " " $(BUILD_THUMBPRINT_FILE)))
+ifneq (,$(shell mkdir -p $(GENERIC_OUT) && echo $(BUILD_THUMBPRINT) >$(BUILD_THUMBPRINT_FILE) && grep " " $(BUILD_THUMBPRINT_FILE)))
   $(error BUILD_THUMBPRINT cannot contain spaces: "$(file <$(BUILD_THUMBPRINT_FILE))")
 endif
 # unset it for safety.
