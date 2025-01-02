@@ -72,7 +72,7 @@ public class PlatformAconfigPackageInternalTest {
 
             PlatformAconfigPackageInternal reader = readerMap.get(packageName);
             if (reader == null) {
-                reader = PlatformAconfigPackageInternal.load(container, packageName, fingerprint);
+                reader = PlatformAconfigPackageInternal.load(packageName, fingerprint);
                 readerMap.put(packageName, reader);
             }
             boolean jVal = reader.getBooleanFlagValue(fNode.getFlagIndex());
@@ -83,20 +83,11 @@ public class PlatformAconfigPackageInternalTest {
 
     @Test
     public void testPlatformAconfigPackage_load_withError() throws IOException {
-        // container not found fake_container
-        AconfigStorageException e =
-                assertThrows(
-                        AconfigStorageException.class,
-                        () ->
-                                PlatformAconfigPackageInternal.load(
-                                        "fake_container", "fake_package", 0));
-        assertEquals(AconfigStorageException.ERROR_CANNOT_READ_STORAGE_FILE, e.getErrorCode());
-
         // package not found
         e =
                 assertThrows(
                         AconfigStorageException.class,
-                        () -> PlatformAconfigPackageInternal.load("system", "fake_container", 0));
+                        () -> PlatformAconfigPackageInternal.load("fake_container", 0));
         assertEquals(AconfigStorageException.ERROR_PACKAGE_NOT_FOUND, e.getErrorCode());
 
         // fingerprint doesn't match
@@ -119,7 +110,7 @@ public class PlatformAconfigPackageInternalTest {
                             AconfigStorageException.class,
                             () ->
                                     PlatformAconfigPackageInternal.load(
-                                            container, packageName, fingerprint + 1));
+                                            packageName, fingerprint + 1));
             assertEquals(AconfigStorageException.ERROR_FILE_FINGERPRINT_MISMATCH, e.getErrorCode());
         }
     }

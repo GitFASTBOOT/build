@@ -17,6 +17,7 @@
 package android.aconfig.storage.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 import android.aconfig.DeviceProtos;
@@ -42,6 +43,18 @@ import java.util.Set;
 public class PlatformAconfigPackageTest {
 
     private static final Set<String> PLATFORM_CONTAINERS = Set.of("system", "vendor", "product");
+
+    @Test
+    public void testPlatformAconfigPackage_StorageFilesCache() {
+        for (parsed_flag flag : flags) {
+            if (flag.permission == Aconfig.READ_ONLY && flag.state == Aconfig.DISABLED) {
+                continue;
+            }
+            String packageName = flag.package_;
+            if (!PLATFORM_CONTAINERS.contains(container)) continue;
+            assertNotNull(PlatformAconfigPackage.load(packageName));
+        }
+    }
 
     @Test
     public void testPlatformAconfigPackage_load() throws IOException {

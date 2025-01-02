@@ -31,9 +31,9 @@ pub fn generate_java_code<I>(
     parsed_flags_iter: I,
     codegen_mode: CodegenMode,
     flag_ids: HashMap<String, u16>,
-    allow_instrumentation: bool,
+    _allow_instrumentation: bool,
     package_fingerprint: u64,
-    new_exported: bool,
+    _new_exported: bool,
 ) -> Result<Vec<OutputFile>>
 where
     I: Iterator<Item = ProtoParsedFlag>,
@@ -57,11 +57,11 @@ where
         properties_set,
         package_name: package.to_string(),
         library_exported,
-        allow_instrumentation,
+        allow_instrumentation: true,
         container,
         is_platform_container,
         package_fingerprint: format!("0x{:X}L", package_fingerprint),
-        new_exported,
+        new_exported: true,
     };
     let mut template = TinyTemplate::new();
     template.add_template("Flags.java", include_str!("../../templates/Flags.java.template"))?;
