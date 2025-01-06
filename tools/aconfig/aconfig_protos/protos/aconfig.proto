@@ -193,3 +193,28 @@ message parsed_flag {
 message parsed_flags {
   repeated parsed_flag parsed_flag = 1;
 }
+
+// This protobuf defines messages used to store data about flags used to guard
+// APIs which are finalized for a given SDK.
+message finalized_flag {
+  // Name of the flag (required). Must match name in the aconfig declaration.
+  optional string name = 1;
+
+  // Namespace the flag belongs to (required). Must match namespace in the aconfig declaration.
+  optional string namespace = 2;
+
+  // Package the flag belongs to (required).  Must match package in the aconfig declaration header.
+  optional string package = 3;
+
+  // Container the flag belongs to (required).  Must match container in the aconfig declaration header.
+  optional string container = 4;
+
+  // SDK level in which the flag was finalized.
+  optional int32 min_sdk = 5;
+
+  // SDK extensions?
+};
+
+message finalized_flags {
+  repeated finalized_flag finalized_flag = 1;
+}

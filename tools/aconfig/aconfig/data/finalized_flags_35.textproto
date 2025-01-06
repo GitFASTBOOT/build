@@ -1,0 +1,7 @@
+finalized_flag {
+    name: "enabled_fixed_ro_exported"
+    namespace: "aconfig_test"
+    package: "com.android.aconfig.test"
+    container: "system"
+    min_sdk: 35
+}
