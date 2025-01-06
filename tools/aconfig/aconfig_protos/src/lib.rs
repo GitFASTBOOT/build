@@ -41,6 +41,8 @@ mod auto_generated {
     pub use aconfig_rust_proto::aconfig::Parsed_flag as ProtoParsedFlag;
     pub use aconfig_rust_proto::aconfig::Parsed_flags as ProtoParsedFlags;
     pub use aconfig_rust_proto::aconfig::Tracepoint as ProtoTracepoint;
+    pub use aconfig_rust_proto::aconfig::Finalized_flags as FinalizedFlags;
+    pub use aconfig_rust_proto::aconfig::Finalized_flag as FinalizedFlag;
 }
 
 // ---- When building with cargo ----
@@ -61,6 +63,8 @@ mod auto_generated {
     pub use aconfig::Parsed_flag as ProtoParsedFlag;
     pub use aconfig::Parsed_flags as ProtoParsedFlags;
     pub use aconfig::Tracepoint as ProtoTracepoint;
+    pub use aconfig::Finalized_flags as FinalizedFlags;
+    pub use aconfig::Finalized_flag as FinalizedFlag;
 }
 
 // ---- Common for both the Android tool-chain and cargo ----
