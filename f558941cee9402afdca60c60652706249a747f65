@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a2c8cbc_ff5fd9aa",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2025-01-06T18:37:35Z",
+      "side": 1,
+      "message": "This is the exact opposite of what I was expecting, and makes the difference between make and soong-built images even larger.\n\nYou don\u0027t need to put product/vendor aconfig flags into the system aconfig flags file. If the product/vendor images \"don\u0027t exist\", they\u0027ll be made into subdirectories on the system partition, and their own individual aconfig flag files will still be there.\n\nRather than folding more things into the system aconfig flag files, we need to break out the system_ext flags into their own flag file, so that when building the system or system_ext images in soong, they don\u0027t need to know anything about the opposite partition. Then at runtime the aconfig daemon can merge them if necessary.",
+      "revId": "f558941cee9402afdca60c60652706249a747f65",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
