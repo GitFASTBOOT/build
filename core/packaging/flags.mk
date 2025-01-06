@@ -18,7 +18,26 @@
 #
 
 # TODO: Should we do all of the images in $(IMAGES_TO_BUILD)?
-_FLAG_PARTITIONS := product system vendor
+_FLAG_PARTITIONS := system
+_FLAG_PARTITIONS_IN_SYSTEM :=
+
+ifneq (,$(BOARD_USES_SYSTEM_EXTIMAGE))
+	_FLAG_PARTITIONS += system_ext
+else
+	_FLAG_PARTITIONS_IN_SYSTEM += system_ext
+endif
+
+ifneq (,$(BOARD_USES_PRODUCTIMAGE))
+	_FLAG_PARTITIONS += product
+else
+	_FLAG_PARTITIONS_IN_SYSTEM += product
+endif
+
+ifneq (,$(BOARD_USES_VENDORIMAGE))
+	_FLAG_PARTITIONS += vendor
+else
+	_FLAG_PARTITIONS_IN_SYSTEM += vendor
+endif
 
 
 # -----------------------------------------------------------------
@@ -38,6 +57,12 @@ $(strip $(1)): $(ACONFIG) $(strip $(4))
 		$$(ACONFIG) dump --dedup --format protobuf --out $$(PRIVATE_OUT) \
 			--filter container:$(strip $(3))+state:ENABLED \
 			--filter container:$(strip $(3))+permission:READ_WRITE \
+			$(if $(filter system, $(3)), \
+				$(foreach subpartition, $(_FLAG_PARTITIONS_IN_SYSTEM), \
+					--filter container:$(subpartition)+state:ENABLED \
+					--filter container:$(subpartition)+permission:READ_WRITE \
+				) \
+			) \
 			$$(addprefix --cache ,$$(PRIVATE_IN)), \
 		echo -n > $$(PRIVATE_OUT) \
 	)
@@ -73,8 +98,10 @@ $(foreach partition, $(_FLAG_PARTITIONS), \
 					$(ALL_MODULES.$(m).ACONFIG_FILES) \
 				) \
 				$(if $(filter system, $(partition)), \
-					$(foreach m, $(call register-names-for-partition, system_ext), \
-						$(ALL_MODULES.$(m).ACONFIG_FILES) \
+					$(foreach subpartition, $(_FLAG_PARTITIONS_IN_SYSTEM), \
+						$(foreach m, $(call register-names-for-partition, $(subpartition)), \
+							$(ALL_MODULES.$(m).ACONFIG_FILES) \
+						) \
 					) \
 				) \
 			) \
