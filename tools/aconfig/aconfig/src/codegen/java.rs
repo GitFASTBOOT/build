@@ -17,13 +17,16 @@
 use anyhow::Result;
 use serde::Serialize;
 use std::collections::{BTreeMap, BTreeSet};
+use std::env;
+use std::fs::File;
+use std::io::Read;
 use std::path::PathBuf;
 use tinytemplate::TinyTemplate;
 
 use crate::codegen;
 use crate::codegen::CodegenMode;
 use crate::commands::{should_include_flag, OutputFile};
-use aconfig_protos::{ProtoFlagPermission, ProtoFlagState, ProtoParsedFlag};
+use aconfig_protos::{FinalizedFlag, FinalizedFlags, ProtoFlagPermission, ProtoFlagState, ProtoParsedFlag};
 use std::collections::HashMap;
 
 pub fn generate_java_code<I>(
@@ -38,8 +41,20 @@ pub fn generate_java_code<I>(
 where
     I: Iterator<Item = ProtoParsedFlag>,
 {
+    let finalized_flags = match load_finalized_flags() {
+      Ok(v) => v,
+      Err(e) => {
+        println!("Error loading finalized flags: {}", e);
+        let current_dir = env::current_dir();
+        match current_dir {
+            Ok(path) => println!("Current working directory: {}", path.display()),
+            Err(e) => println!("Error getting current directory: {}", e),
+        }
+        FinalizedFlags::new()
+      }
+    };
     let flag_elements: Vec<FlagElement> =
-        parsed_flags_iter.map(|pf| create_flag_element(package, &pf, flag_ids.clone())).collect();
+        parsed_flags_iter.map(|pf| create_flag_element(package, &pf, flag_ids.clone(), &finalized_flags)).collect();
     let namespace_flags = gen_flags_by_namespace(&flag_elements);
     let properties_set: BTreeSet<String> =
         flag_elements.iter().map(|fe| format_property_name(&fe.device_config_namespace)).collect();
@@ -152,12 +167,15 @@ struct FlagElement {
     pub is_read_write: bool,
     pub method_name: String,
     pub properties: String,
+    pub finalized_sdk_present: bool,
+    pub finalized_sdk_value: i32,
 }
 
 fn create_flag_element(
     package: &str,
     pf: &ProtoParsedFlag,
     flag_offsets: HashMap<String, u16>,
+    finalized_flags: &FinalizedFlags,
 ) -> FlagElement {
     let device_config_flag = codegen::create_device_config_ident(package, pf.name())
         .expect("values checked at flag parse time");
@@ -179,6 +197,10 @@ fn create_flag_element(
         }
     };
 
+    let finalized_sdk = get_finalized_sdk_level(package, pf, finalized_flags);
+    let finalized_sdk_present = finalized_sdk.is_some();
+    let finalized_sdk_value = finalized_sdk.unwrap_or(0);
+
     FlagElement {
         container: pf.container().to_string(),
         default_value: pf.state() == ProtoFlagState::ENABLED,
@@ -190,6 +212,8 @@ fn create_flag_element(
         is_read_write: pf.permission() == ProtoFlagPermission::READ_WRITE,
         method_name: format_java_method_name(pf.name()),
         properties: format_property_name(pf.namespace()),
+        finalized_sdk_present,
+        finalized_sdk_value,
     }
 }
 
@@ -217,6 +241,30 @@ fn format_java_method_name(flag_name: &str) -> String {
 fn format_property_name(property_name: &str) -> String {
     let name = format_java_method_name(property_name);
     format!("mProperties{}{}", &name[0..1].to_ascii_uppercase(), &name[1..])
+}
+
+fn get_finalized_sdk_level(package: &str, pf: &ProtoParsedFlag, finalized_flags: &FinalizedFlags) -> Option<i32> {
+    let all_finalized: Vec<&FinalizedFlag> = finalized_flags.finalized_flag.iter().filter(| flag | flag.name() == pf.name()
+      && flag.package() == package
+      && flag.container() == pf.container()).collect();
+    if !all_finalized.is_empty() {
+      let finalized_flag = all_finalized[0];
+      println!("Flag {} finalized in SDK {}", pf.name(), finalized_flag.min_sdk.unwrap());
+      finalized_flag.min_sdk
+    } else {
+      None
+    }
+}
+
+fn load_finalized_flags() -> Result<FinalizedFlags> {
+    let mut f = File::open("build/make/tools/aconfig/aconfig/data/finalized_flags_35.textproto")?;
+    let mut buffer = String::new();
+    f.read_to_string(&mut buffer)?;
+
+    let mut finalized_flags = FinalizedFlags::default();
+    protobuf::text_format::merge_from_str(&mut finalized_flags, &buffer)?;
+
+    Ok(finalized_flags)
 }
 
 #[cfg(test)]
@@ -925,6 +973,7 @@ mod tests {
 
         let expect_feature_flags_impl_content = r#"
         package com.android.aconfig.test;
+        import android.os.Build;
         import android.os.flagging.AconfigPackage;
         import android.util.Log;
         /** @hide */
@@ -938,7 +987,7 @@ mod tests {
                 try {
                     AconfigPackage reader = AconfigPackage.load("com.android.aconfig.test");
                     disabledRwExported = reader.getBooleanFlagValue("disabled_rw_exported", false);
-                    enabledFixedRoExported = reader.getBooleanFlagValue("enabled_fixed_ro_exported", false);
+                    enabledFixedRoExported = Build.VERSION.SDK_INT >= 35 ? true : reader.getBooleanFlagValue("enabled_fixed_ro_exported", false);
                     enabledRoExported = reader.getBooleanFlagValue("enabled_ro_exported", false);
                 } catch (Exception e) {
                     // pass
