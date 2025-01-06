@@ -10,14 +10,20 @@
 #-flattenpackagehierarchy
 
 # Keep classes and members with the platform-defined @VisibleForTesting annotation.
--keep @com.android.internal.annotations.VisibleForTesting class *
+# TODO(b/373579455): Evaluate if <init> needs to be kept.
+-keep @com.android.internal.annotations.VisibleForTesting class * {
+    void <init>();
+}
 -keepclassmembers class * {
     @com.android.internal.annotations.VisibleForTesting *;
 }
 
 # Keep classes and members with platform @TestApi annotations, similar to
 # @VisibleForTesting.
--keep @android.annotation.TestApi class *
+# TODO(b/373579455): Evaluate if <init> needs to be kept.
+-keep @android.annotation.TestApi class * {
+    void <init>();
+}
 -keepclassmembers class * {
     @android.annotation.TestApi *;
 }
@@ -27,7 +33,10 @@
 # test code that isn't actually needed for platform testing.
 # TODO(b/239961360): Migrate away from androidx.annotation.VisibleForTesting
 # and com.google.common.annotations.VisibleForTesting use in platform code.
--keep @**.VisibleForTesting class android.**,com.android.**,com.google.android.**
+# TODO(b/373579455): Evaluate if <init> needs to be kept.
+-keep @**.VisibleForTesting class android.**,com.android.**,com.google.android.** {
+    void <init>();
+}
 -keepclassmembers class android.**,com.android.**,com.google.android.** {
     @**.VisibleForTesting *;
 }
@@ -53,7 +62,10 @@
 #  * android.support.annotation
 #  * androidx.annotation
 #  * com.android.internal.annotations
--keep class **android**.annotation*.Keep
+# TODO(b/373579455): Evaluate if <init> needs to be kept.
+-keep class **android**.annotation*.Keep {
+    void <init>();
+}
 
 -keep @**android**.annotation*.Keep class * { *; }
 

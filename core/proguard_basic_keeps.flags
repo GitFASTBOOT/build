@@ -36,7 +36,10 @@
 
 # Keep serializable classes and necessary members for serializable classes
 # Copied from the ProGuard manual at http://proguard.sourceforge.net.
--keepnames class * implements java.io.Serializable
+# TODO(b/373579455): Evaluate if <init> needs to be kept.
+-keepnames class * implements java.io.Serializable {
+    void <init>();
+}
 -keepclassmembers class * implements java.io.Serializable {
     static final long serialVersionUID;
     private static final java.io.ObjectStreamField[] serialPersistentFields;
