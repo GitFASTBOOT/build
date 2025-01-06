@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9113ee35_436ab649",
+        "filename": "core/android_soong_config_vars.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1000701
+      },
+      "writtenOn": "2025-01-06T05:32:02Z",
+      "side": 0,
+      "message": "Why is the ifdef needed?",
+      "revId": "e56edd1c1e7ad4b49f1385db00d4edb7c400705e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
