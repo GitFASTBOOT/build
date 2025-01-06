@@ -16,6 +16,24 @@
       "message": "Maybe rename to missing_soong_module_info.py?",
       "revId": "80e794e7a1a1a2d5c07d8f0269a112c598545697",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1415017d_6314eb52",
+        "filename": "tools/missing_module_info.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000701
+      },
+      "writtenOn": "2025-01-06T23:21:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d467ab14_4b7ae7c4",
+      "revId": "80e794e7a1a1a2d5c07d8f0269a112c598545697",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
