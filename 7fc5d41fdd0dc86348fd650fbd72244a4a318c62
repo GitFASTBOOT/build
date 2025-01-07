@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2873d410_54ad87d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2025-01-07T07:20:15Z",
+      "side": 1,
+      "message": "This installs aconfig_flags.pb and map files for each partition even if the partitions are not created. I am still working on the solution for soong system image.\n\nWith this change, we may restore the system_ext container to be read from system/system_ext/etc/aconfig_flags.pb.",
+      "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
