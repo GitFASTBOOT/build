@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a460fe2c_656acfaa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1127078
+      },
+      "writtenOn": "2025-01-07T08:09:37Z",
+      "side": 1,
+      "message": "did we actually see any cases where we had synthetic instances of these specific types?",
+      "range": {
+        "startLine": 9,
+        "startChar": 59,
+        "endLine": 11,
+        "endChar": 0
+      },
+      "revId": "71bff6a6a19a91138a47b6ef3f6848248e55012b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
