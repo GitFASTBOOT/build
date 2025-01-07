@@ -547,7 +547,7 @@ mod tests {
         import android.util.Log;
         /** @hide */
         public final class FeatureFlagsImpl implements FeatureFlags {
-            private static final String TAG = "com.android.aconfig.test.FeatureFlagsImpl";
+            private static final String TAG = "FeatureFlagsImpl";
             private static volatile boolean isCached = false;
             private static boolean disabledRw = false;
             private static boolean disabledRwExported = false;
@@ -929,7 +929,7 @@ mod tests {
         import android.util.Log;
         /** @hide */
         public final class FeatureFlagsImpl implements FeatureFlags {
-            private static final String TAG = "com.android.aconfig.test.FeatureFlagsImpl_exported";
+            private static final String TAG = "FeatureFlagsImplExport";
             private static volatile boolean isCached = false;
             private static boolean disabledRwExported = false;
             private static boolean enabledFixedRoExported = false;
