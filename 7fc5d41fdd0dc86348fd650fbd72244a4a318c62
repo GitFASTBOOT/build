@@ -91,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "16fcdad4_0cb06fd7",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2025-01-08T01:52:50Z",
+      "side": 1,
+      "message": "aosp/3398702 is the one that needs to be reverted for this change. @dzshen@google.com",
+      "parentUuid": "5a6f292d_4a6eebdc",
+      "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1a4cb2b5_dcb44cb0",
         "filename": "core/packaging/flags.mk",
         "patchSetId": 2
