@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0e5cd4d_bd05d7ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2025-01-08T01:18:57Z",
+      "side": 1,
+      "message": "We are working on GSI that includes `system_ext` and `product` in the system image (https://cs.android.com/android/platform/superproject/main/+/main:build/make/target/product/gsi/Android.bp;drc\u003dfb419ee5d8bcdaa48f684b4d68ffd6b5a64ac98b;l\u003d85)\nCurrent soong implementation installs only one aconfig_flags.pb in the image module.",
+      "parentUuid": "fdcf5acb_0b2ac43a",
+      "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b27ebb8_cf87ca04",
@@ -49,6 +67,24 @@
       "writtenOn": "2025-01-07T18:10:51Z",
       "side": 1,
       "message": "Don\u0027t we need an equivalent change in the aconfig runtime to read the new system_ext aconfig files?",
+      "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a6f292d_4a6eebdc",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2025-01-08T01:18:57Z",
+      "side": 1,
+      "message": "If aconfig already removed reading system_ext/etc/, that must be reverted. I think system_ext -\u003e system/system_ext/ symlink works for it.",
+      "parentUuid": "9b27ebb8_cf87ca04",
       "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
