@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "177c6850_1fc1208a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1315724
+      },
+      "writtenOn": "2025-01-08T09:43:53Z",
+      "side": 1,
+      "message": "Presubmit failed in git main branches, it should be passed after git main change merged.",
+      "revId": "036b0611983e45d8bc3c73870f406d9192c26360",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
