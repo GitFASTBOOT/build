@@ -158,6 +158,24 @@
       "parentUuid": "e5b70eb0_dd2deac5",
       "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ca2ab62_baf061c1",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2025-01-08T18:03:10Z",
+      "side": 1,
+      "message": "`define` works like a regular variable assignment, so you can clear them with `register-names-for-container :\u003d`",
+      "parentUuid": "320677a6_0245e5ca",
+      "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
