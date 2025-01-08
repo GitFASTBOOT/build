@@ -104,6 +104,24 @@
       "message": "Could you clear these new functions at the end of the file?\n\nAlso register-names-for-partitions is no longer used, consider removing it.",
       "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5b70eb0_dd2deac5",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1146974
+      },
+      "writtenOn": "2025-01-08T01:49:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a4cb2b5_dcb44cb0",
+      "revId": "7fc5d41fdd0dc86348fd650fbd72244a4a318c62",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
