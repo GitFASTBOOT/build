@@ -54,4 +54,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
 
 # Add adb keys to debuggable AOSP builds (if they exist)
-$(call inherit-product-if-exists, vendor/google/security/adb/vendor_key.mk)
+$(call inherit-product-if-exists, $(INTERNAL_VENDOR_PATH)/security/adb/vendor_key.mk)

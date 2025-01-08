@@ -69,8 +69,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Enable CFI for security-sensitive components
 $(call inherit-product, $(SRC_TARGET_DIR)/product/cfi-common.mk)
-$(call inherit-product-if-exists, vendor/google/products/cfi-vendor.mk)
+$(call inherit-product-if-exists, $(INTERNAL_VENDOR_PATH)/products/cfi-vendor.mk)
 
 # Enable MTE for security-sensitive components
 $(call inherit-product, $(SRC_TARGET_DIR)/product/memtag-common.mk)
-$(call inherit-product-if-exists, vendor/google/products/memtag-vendor.mk)
+$(call inherit-product-if-exists, $(INTERNAL_VENDOR_PATH)/products/memtag-vendor.mk)

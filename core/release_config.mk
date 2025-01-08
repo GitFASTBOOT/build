@@ -50,9 +50,9 @@ endif
 # If this is a google source tree, restrict it to only the one file
 # which has OWNERS control.  If it isn't let others define their own.
 config_map_files := $(wildcard build/release/release_config_map.mk) \
-    $(wildcard vendor/google_shared/build/release/release_config_map.mk) \
-    $(if $(wildcard vendor/google/release/release_config_map.mk), \
-        vendor/google/release/release_config_map.mk, \
+    $(wildcard $(INTERNAL_VENDOR_SHARED_PATH)/build/release/release_config_map.mk) \
+    $(if $(wildcard $(INTERNAL_VENDOR_PATH)/release/release_config_map.mk), \
+        $(INTERNAL_VENDOR_PATH)/release/release_config_map.mk, \
         $(sort \
             $(wildcard device/*/release/release_config_map.mk) \
             $(wildcard device/*/*/release/release_config_map.mk) \
@@ -62,9 +62,9 @@ config_map_files := $(wildcard build/release/release_config_map.mk) \
     )
 
 protobuf_map_files := build/release/release_config_map.textproto \
-    $(wildcard vendor/google_shared/build/release/release_config_map.textproto) \
-    $(if $(wildcard vendor/google/release/release_config_map.textproto), \
-        vendor/google/release/release_config_map.textproto, \
+    $(wildcard $(INTERNAL_VENDOR_SHARED_PATH)/build/release/release_config_map.textproto) \
+    $(if $(wildcard $(INTERNAL_VENDOR_PATH)/release/release_config_map.textproto), \
+        $(INTERNAL_VENDOR_PATH)/release/release_config_map.textproto, \
         $(sort \
             $(wildcard device/*/release/release_config_map.textproto) \
             $(wildcard device/*/*/release/release_config_map.textproto) \

@@ -54,7 +54,7 @@ endif
 ifdef WIFI_MULTIPLE_VENDOR_HALS
     $(call soong_config_set,wifi,multiple_vendor_hals,$(WIFI_MULTIPLE_VENDOR_HALS))
 endif
-ifneq ($(wildcard vendor/google/libraries/GoogleWifiConfigLib),)
+ifneq ($(wildcard $(INTERNAL_VENDOR_PATH)/libraries/GoogleWifiConfigLib),)
     $(call soong_config_set,wifi,google_wifi_config_lib,true)
 endif
 ifdef WIFI_HAL_INTERFACE_COMBINATIONS

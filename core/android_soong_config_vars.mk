@@ -300,4 +300,4 @@ $(call soong_config_set,google_graphics,board_hwc_version,$(BOARD_HWC_VERSION))
 
 # Variables for extra branches
 # TODO(b/383238397): Use bootstrap_go_package to enable extra flags.
--include vendor/google/build/extra_soong_config_vars.mk
+-include $(INTERNAL_VENDOR_PATH)/build/extra_soong_config_vars.mk

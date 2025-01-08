@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_default.mk)
 # Add adb keys to debuggable AOSP builds (if they exist)
-$(call inherit-product-if-exists, vendor/google/security/adb/vendor_key.mk)
+$(call inherit-product-if-exists, $(INTERNAL_VENDOR_PATH)/security/adb/vendor_key.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -153,4 +153,4 @@ $(call require-artifacts-in-path, $(_my_paths), $(_my_allowed_list))
 
 # Product config map to toggle between sources and prebuilts of required mainline modules
 PRODUCT_RELEASE_CONFIG_MAPS += $(wildcard build/release/gms_mainline/required/release_config_map.textproto)
-PRODUCT_RELEASE_CONFIG_MAPS += $(wildcard vendor/google_shared/build/release/gms_mainline/required/release_config_map.textproto)
+PRODUCT_RELEASE_CONFIG_MAPS += $(wildcard $(INTERNAL_VENDOR_SHARED_PATH)/build/release/gms_mainline/required/release_config_map.textproto)
