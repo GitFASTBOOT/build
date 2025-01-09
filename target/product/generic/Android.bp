@@ -427,18 +427,6 @@ android_filesystem_defaults {
         gen_linker_config: true,
         linker_config_srcs: [":system_linker_config_json_file"],
     },
-    fsverity: {
-        inputs: [
-            "etc/boot-image.prof",
-            "etc/classpaths/*.pb",
-            "etc/dirty-image-objects",
-            "etc/preloaded-classes",
-            "framework/*",
-            "framework/*/*", // framework/{arch}
-            "framework/oat/*/*", // framework/oat/{arch}
-        ],
-        libs: [":framework-res{.export-package.apk}"],
-    },
     build_logtags: true,
     gen_aconfig_flags_pb: true,
 
@@ -839,6 +827,18 @@ android_filesystem_defaults {
                     "uprobestats", // base_system internal
                 ],
             }),
+            fsverity: {
+                inputs: [
+                    "etc/boot-image.prof",
+                    "etc/classpaths/*.pb",
+                    "etc/dirty-image-objects",
+                    "etc/preloaded-classes",
+                    "framework/*",
+                    "framework/*/*", // framework/{arch}
+                    "framework/oat/*/*", // framework/oat/{arch}
+                ],
+                libs: [":framework-res{.export-package.apk}"],
+            },
         },
         both: {
             deps: [
