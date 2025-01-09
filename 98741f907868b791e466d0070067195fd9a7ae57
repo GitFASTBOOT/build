@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a3a8e51_9607334b",
+        "filename": "core/packaging/flags.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1882770
+      },
+      "writtenOn": "2025-01-09T20:56:23Z",
+      "side": 1,
+      "message": "Just trying to work it out in my mind for all the cases.\n\nSay we have a flag foo that is used by /system and is declared as system. another flag bar that is used by /system_ext but declared as system.\n\ncase 1, a normal build where /system and /system_ext are separate partitions:\n\n(a), if we are building aconfig_flags.pb for /system, it would pull all the caches that system image depends on. So, it would contain flag foo, this is correct.\n\n(6), if we are building aconfig_flags.pb for /system_ext, it would pull all the caches that system_ext image depends on. So it would pull in flag bar\u0027s cache. But it is excluded by aconfig binary. So system_ext will not have flag bar, whch is wrong.\n\ncase 2, a build like mokey where /system_ext is a symlink of /system/system_ext\n\n(a) if we are building aconfig_flags.pb for /system, it would pull all the caches system image depends on, so both foo and bar are included and present in aconfig_flags.pb?\n\n(b) if we are building aconfig_flags.pb for /system/system_ext, it would pull all caches for system_ext, which will be empty? So no flags in /system/system_ext/aconfig_flags.pb\n\nAre my understanding of case 2 correct? Or not really.\n\nBut even for case 1, it seems wrong if we did not update the aconfig declarations back to system_ext first?",
+      "revId": "98741f907868b791e466d0070067195fd9a7ae57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
