@@ -15,5 +15,7 @@
 # limitations under the License.
 set -euo pipefail
 
+echo "--- start ---"
 build/soong/soong_ui.bash --make-mode build_test_suites
+echo "--- end build_test_suites build ---"
 $(build/soong/soong_ui.bash --dumpvar-mode HOST_OUT)/bin/build_test_suites $@
