@@ -15,5 +15,12 @@
 # limitations under the License.
 set -euo pipefail
 
+echo "--- start ---"
 build/soong/soong_ui.bash --make-mode build_test_suites
+echo "--- end build_test_suites build ---"
+
+cp $OUT_DIR/soong/release-config/release_config-aosp_arm64-trunk_staging.vars $DIST_DIR/before_release_config-aosp_arm64-trunk_staging.vars
+
 $(build/soong/soong_ui.bash --dumpvar-mode HOST_OUT)/bin/build_test_suites $@
+
+cp $OUT_DIR/soong/release-config/release_config-aosp_arm64-trunk_staging.vars $DIST_DIR/after_release_config-aosp_arm64-trunk_staging.vars
