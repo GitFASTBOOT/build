@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bde0b2fc_3031077e",
+        "filename": "core/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5182,
+      "author": {
+        "id": 1415877
+      },
+      "writtenOn": "2025-01-10T06:02:56Z",
+      "side": 1,
+      "message": "This fails with .capex for now. I\u0027ll handle this later.",
+      "range": {
+        "startLine": 5182,
+        "startChar": 80,
+        "endLine": 5182,
+        "endChar": 95
+      },
+      "revId": "7f50a123045520f2c5e18e9eb4e83f92244a1459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
