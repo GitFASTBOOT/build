@@ -19,11 +19,11 @@ function finalize_vintf_resources() {
     # system/sepolicy
     "$top/system/sepolicy/tools/finalize-vintf-resources.sh" "$top" "$FINAL_BOARD_API_LEVEL"
 
-    create_new_compat_matrix_and_kernel_configs
-
-    # pre-finalization build target (trunk)
     local aidl_m="$top/build/soong/soong_ui.bash --make-mode"
     AIDL_TRANSITIVE_FREEZE=true $aidl_m aidl-freeze-api create_reference_dumps
+
+
+    create_new_compat_matrix_and_kernel_configs
 
     # Generate LLNDK ABI dumps
     # This command depends on ANDROID_BUILD_TOP
@@ -47,8 +47,8 @@ function create_new_compat_matrix_and_kernel_configs() {
     "$top/prebuilts/build-tools/path/linux-x86/python3" "$top/hardware/interfaces/compatibility_matrices/bump.py" "$CURRENT_COMPATIBILITY_MATRIX_LEVEL" "$NEXT_COMPATIBILITY_MATRIX_LEVEL" "$CURRENT_RELEASE_LETTER" "$NEXT_RELEASE_LETTER" "$FINAL_CORRESPONDING_PLATFORM_VERSION"
 
     # Freeze the current framework manifest file. This relies on the
-    # aosp_cf_x86_64-trunk_staging build target to get the right manifest
-    # fragments installed.
+    # interfaces already being frozen because we are building with fina_0 which
+    # inherits from `next` where RELEASE_AIDL_USE_UNFROZEN=false
     "$top/system/libhidl/vintfdata/freeze.sh" "$CURRENT_COMPATIBILITY_MATRIX_LEVEL"
 }
 
